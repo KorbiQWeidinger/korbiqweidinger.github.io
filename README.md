@@ -1,1 +1,1 @@
-Korbis github page
+Github page of Korbinian Weidinger

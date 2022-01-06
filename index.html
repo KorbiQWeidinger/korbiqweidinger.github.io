@@ -1,390 +1,181 @@
 <!DOCTYPE html>
-<html lang="de-DE">
-    <meta charset="UTF-8">
-    <title>FPV Tutorium WS2020 | Korbinian Weidinger</title>
-    <meta name="description" content="This website was created to support your FPV learning experience!">
-    <link rel="stylesheet" type="text/css" href="css/normalize.min.css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="css/theme.css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+<html lang="en">
+<title>Korbinian Weidinger</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
 <body>
-    <header class="fade-in">
-        <div class="navigation-bar flex middle-xs">
-            <img src="img/haskell-cool.png" class="logo" alt="">
-            <nav class="end-xs">
-                <ul>
-                    <li><a href="#about-us">About Me</a></li>
-                    <li><a href="#services">Tutorial Links</a></li>
-                    <li><a href="#portfolio">Resources & Slides</a></li>
-                    <li><a href="#benefits">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+     id="mySidebar"><br>
+    <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()">
+        <img src="img/me.jpg" style="width: 100%; height: 100%">
+        <div class="w3-container">
+            <h3 style="padding-bottom: 64px; padding-top: 10px"><b>Korbinian<br>Weidinger</b></h3>
         </div>
-        <div class="hero flex middle-xs" style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('img/background.jpg');
-    }">
-    <div class="hero-text">
-        <h1>FPV Tutorial WS 2020</h1>
-        <p>by Korbinian Weidinger</p>
+    </a>
+    <div class="w3-bar-block">
+        <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+        <a href="#career" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Career</a>
+        <a href="#freelance" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Freelance</a>
+        <a href="#tutoring" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tutoring</a>
+        <a href="#lifestyle" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Lifestyle</a>
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Korbinian Weidinger</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+     id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <div class="w3-container" id="intro">
+        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Introduction</b></h1>
+        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
+        <p>Hi and welcome to my page, I am Korbi, and I created this page, so you can learn more about me and my
+            services.</p>
+        <p>I have a big passion for software development, I love fitness, cooking, traveling, and much more. You can
+            find out more on this page and the linked platforms - but remember, this is just a glimpse into my life.</p>
+        <br>
+        <table style="width: 100%; text-align: center">
+            <tr>
+                <th>
+                    <a href="https://www.linkedin.com/in/korbinian-weidinger-524b63229/" target="_blank">
+                        <img src="img/linkedin-brands.svg" style="height: 40px; width: 40px" alt=""><br>
+                        Korbinian Weidinger
+                    </a>
+                </th>
+                <th>
+                    <a href="mailto:korbi.weidinger2@gmail.com">
+                        <img src="img/envelope-square-solid.svg" style="height: 40px; width: 40px"><br>
+                        korbi.weidinger2@gmail.com
+                    </a>
+                </th>
+                <th>
+                    <a href="tel:+491728861529">
+                        <img src="img/whatsapp-square-brands.svg" style="height: 40px; width: 40px"><br>
+                        +49 172 8861529
+                    </a>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="w3-container" style="margin-top:40px" id="career">
+        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Career</b></h1>
+        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
+
+        <p>You can read the detailed journey about my career here or download my resume for a short summary.</p>
+        <a href="img/lebenslauf_korbinian_weidinger.pdf" download="lebenslauf_korbinian_weidinger.pdf"
+           class="w3-button w3-grey w3-padding-large w3-section" style="width: 280px">
+            <img src="img/download-solid.svg" style="height: 25px; width: 25px">&nbsp;&nbsp;&nbsp;Download Resume (DE)
+        </a>
+        <a href="img/lebenslauf_korbinian_weidinger.pdf" download="lebenslauf_korbinian_weidinger.pdf"
+           class="w3-button w3-grey w3-padding-large w3-section" style="width: 280px">
+            <img src="img/download-solid.svg" style="height: 25px; width: 25px">&nbsp;&nbsp;&nbsp;Download Resume (ENG)
+        </a>
+        <h1 class="w3-xlarge" style="color: #b524c0"><b>Technische Universität München</b></h1>
+        I am currently (01.2022) finishing my B.Sc. in Computer Science at TUM and am accepted to start my M.Sc. in
+        Computer Science this summer (05.2022). I discovered my passion for programming in an orientation course at TUM
+        in 16/17 were we used python and a raspberry pi. I started my B.Sc. in Computer Science in 17.
+        There are some things I believe to be worth mentioning regarding my studies at TUM.
+        In winter 19/20 I participated in the iInternship where I was taught swift for iOS development and was part of a
+        team of 7 students that developed an iOS app for ZEISS. I afterwards chose to be a tutor teaching swift to
+        fellow students and gave a presentation on how to develop a secure login service with server side swift.
+        In winter 20/21 I was a tutor for functional programming and verification.
+        More on my love for teaching <a href="#tutoring">here</a>.
+
+        <h1 class="w3-xlarge" style="color: #b524c0; padding-top: 15px"><b>Anarcon</b></h1>
+        After my first semester in my B.Sc. in Computer Science at TUM I started my first job related to my career at
+        the consulting company <a href="https://anarcon.de/" target="_blank">anarcon</a>. I was very fortunate to be
+        part of the
+        creation of a team of developers where I learned how to set up a scrum team, create a build and deployment
+        pipline for continuous integration with the atlassian products. Special thanks go to head of the team Alex who
+        taught me a lot about programming, system design and how to work in an agile team.
+        As a team we developed various plugins for Jira and Confluence which additionally taught me a lot about the
+        Atlassian products. For my final tasks at anarcon I developed two plugins for Jira by myself.
+
+        <h1 class="w3-xlarge" style="color: #b524c0; padding-top: 15px"><b>CQSE</b></h1>
+        After two years at anarcon I wanted to experience something new and decided to follow my love for programming
+        and clean code. I was happy to get a job at <a href="https://www.cqse.eu/en/" target="_blank">CQSE</a> were I
+        was eager to learn more about Continuous Quality in Software Engineering. I spent most of my time developing for
+        their Software Intelligence Platform Teamscale which taught me a lot about quality metrics in different
+        programming languages. I was also fortunate to write my bachelor thesis about the impact of static analysis on
+        code quality in OSS projects at CQSE. You can find out more about my Bachelor Thesis
+        <a href="https://github.com/KorbiQWeidinger/LinterDetectionTool" target="_blank">here</a>.
+        <br>
+        ...
+    </div>
+
+    <div class="w3-container" style="margin-top:80px" id="freelance">
+        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Freelance</b></h1>
+        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
+
+        <p>Coming soon...</p>
+    </div>
+
+    <div class="w3-container" style="margin-top:80px" id="tutoring">
+        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Tutoring</b></h1>
+        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
+
+        <p>Coming soon...</p>
+    </div>
+
+    <div class="w3-container" style="margin-top:80px" id="lifestyle">
+        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Lifestyle</b></h1>
+        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
+
+        <p>Coming soon...</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="w3-black w3-container"><p class="w3-center">This page was created by <b>Korbinian Weidinger</b></p>
     </div>
 </div>
-</header>
-<div class="wrapper">
-    <main>
-        <section class="intro" id="about-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md">
-                        <h2 class="section-title">About text</h2>
-                    </div>
-                </div>
-                <div class="row margin-bottom ">
-                    <div class="col-md">
-                        <p class="highlight">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                        <p class="author">- John Doe</p>
-                    </div>
-                    <div class="col-md">
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    </div>
-                    <div class="col-md">
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                    </div>
-                </div>
-                <div class="row team center-xs">
-                    <div class="col-md">
-                        <div class="hover-outer-box">
-                            <img src="img/Romi-Kobe.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Romi Kobe</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                    <a href="#!" target="blank" rel="noopener"><img src="img/facebook-icon.svg" class="team-icon"></a> <a href="#!" target="blank" rel="noopener"><img src="img/twitter-icon.svg" class="team-icon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="team-name">Romi Kobe<br/><span class="position">CEO</span></p>
-                    </div>
-                    <div class="col-md">
-                        <div class="hover-outer-box">
-                            <img src="img/Isaac-Desideria.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Isaac Desideria</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                    <a href="#!" target="blank" rel="noopener"><img src="img/facebook-icon.svg" class="team-icon"></a> <a href="#!" target="blank" rel="noopener"><img src="img/twitter-icon.svg" class="team-icon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="team-name">Isaac Desideria<br/><span class="position">CTO</span></p>
-                    </div>
-                    <div class="col-md">
-                        <div class="hover-outer-box">
-                            <img src="img/Magda-Ilija.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Magda Ilija</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                    <a href="#!" target="blank" rel="noopener"><img src="img/facebook-icon.svg" class="team-icon"></a> <a href="#!" target="blank" rel="noopener"><img src="img/twitter-icon.svg" class="team-icon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="team-name">Magda Ilija<br/><span class="position">CFO</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr/>
-        <section class="services" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 center-xs">
-                        <h2 class="section-title">Services</h2>
-                    </div>
-                </div>
-                <div class="row icon-row">
-                    <div class="col-xs center-xs">
-                        <img src="img/001-achievement.svg" class="icon"><br/>
-                        Service 1
-                    </div>
-                    <div class="col-xs center-xs">
-                        <img src="img/002-pencil.svg" class="icon"><br/>
-                        Service 2
-                    </div>
-                    <div class="col-xs center-xs">
-                        <img src="img/003-idea.svg" class="icon"><br/>
-                        Service 3
-                    </div>
-                </div>
-                 <div class="row icon-row">
-                    <div class="col-xs center-xs">
-                        <img src="img/004-shopping-bag.svg" class="icon"><br/>
-                        Service 4
-                    </div>
-                    <div class="col-xs center-xs">
-                        <img src="img/005-fountain-pen.svg" class="icon"><br/>
-                        Service 5
-                    </div>
-                </div>
-                <div class="row margin-bottom ">
-                    <div class="col-md">
-                        <p class="highlight">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                        <p class="author">- John Doe</p>
-                    </div>
-                    <div class="col-md">
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    </div>
-                    <div class="col-md">
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cta middle-xs">
-            <div class="container">
-                <div class="row middle-md">
-                    <div class="col-md-8">
-                        <h2>Call to Action</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-                        <a href=""><button class="light">Call to action</button></a>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cta-display.png" class="display">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="row center-xs">
-                    <div class="col-md">
-                        <h2 class="section-title">Portfolio</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="padding-small">
-                <div class="row margin-bottom-small">
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-1.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-2.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-3.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row margin-bottom-small">
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-4.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-5.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="hover-outer-box">
-                            <img src="img/project-6.jpg">
-                            <div class="hover-inner-box">
-                                <div class="hover-content">
-                                    <h3>Projecttitle</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                                    <a href=""><button class="light">Call to action</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="cta">
-                <div class="container">
-                    <div class="row center-xs">
-                        <div class="col-md">
-                            <h2>Call to action</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                            <a href=""><button class="light">Call to action</button></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="blurbs" id="benefits">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md center-xs">
-                            <h2 class="section-title">Benefits</h2>
-                        </div>
-                    </div>
-                    <div class="row margin-bottom-small center-xs">
-                        <div class="col-md">
-                            <img src="img/001-achievement.svg" class="icon ">
-                            <h3>Benefit 1</h3>
-                            <p>Lorem ipsum dolor sit amet, c-r adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim. </p>
-                        </div>
-                        <div class="col-md">
-                            <img src="img/002-pencil.svg" class="icon">
-                            <h3>Benefit 2</h3>
-                            <p>Lorem ipsum dolor sit amet, c-r adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim. </p>
-                        </div>
-                        <div class="col-md">
-                            <img src="img/003-idea.svg" class="icon">
-                            <h3>Benefit 3</h3>
-                            <p>Lorem ipsum dolor sit amet, c-r adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim. </p>
-                        </div>
-                    </div>
-                    <div class="row center-xs">
-                        <div class="col-md">
-                            <img src="img/004-shopping-bag.svg" class="icon">
-                            <h3>Benefit 4</h3>
-                            <p>Lorem ipsum dolor sit amet, c-r adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim. </p>
-                        </div>
-                        <div class="col-md">
-                            <img src="img/005-fountain-pen.svg" class="icon">
-                            <h3>Benefit 5</h3>
-                            <p>Lorem ipsum dolor sit amet, c-r adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim. </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="newsletter">
-                <div class="container">
-                    <div class="row center-xs">
-                        <div class="col-md ">
-                            <h2>Our newsletter</h2>
-                            <form class="flex center-xs">
-                                <input placeholder="Enter Your Email" type="email" required="" name="">
-                                <button>SUBSCRIBE</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="contact" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md center-xs">
-                            <h2 class="section-title">Contact</h2>
-                        </div>
-                    </div>
-                    <div class="row margin-bottom-small center-xs">
-                        <div class="col-md">Call Us<br/>+49 561 0000 0000</div>
-                        <div class="col-md">Address<br/>Streetname 12</div>
-                        <div class="col-md">Email<br/>kontakt@lautenschlager.de</div>
-                    </div>
-                    <form action="">
-                        <div class="row margin-bottom-small center-xs">
 
-                            <div class="col-md padding-small">
-                                <div class="row">
-                                    <div class="col-md">
-                                        <input placeholder="Enter Your Name" type="text" name="" value="" class="margin-bottom-small">
-                                        <input placeholder="Enter Your Email" type="email" name=""  value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md padding-small">
-                                <textarea placeholder="Your Message" name="" rows="8" class="margin-bottom-small"></textarea>
-                                <input type="submit" value="Submit">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md center-xs">
-                    <img src="img/logo-footer.svg" class="margin-bottom" style="max-width: 150px;">
-                </div>
-            </div>
-            <div class="row margin-bottom-small">
-                <div class="col-md-8">
-                    <h3>About us</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#why-us">Why us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md ">
-                    <p>Follow me on <a href="https://twitter.com/lautenschlagera" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #38A1F3;">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                    </svg></a></p>
-                    <p>Template created for free commercial use by Andreas Lautenschlager.</p>
-                    <p>More free downloads under <a href="https://lautenschlager.de" target="_blank" rel="noopener">lautenschlager.de</a></p>
-                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0; max-width: 60px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
-                    <p>I thank following people for their contribution: <a href="credits.txt">Credits</a>.</p>
-                </div>
 
-            </div>
-        </div>
-    </footer>
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
 
-    <div class="row secondary-footer">
-        <div class="col-md">
-         <p>Made with love ♥ by Andreas Lautenschlager © 2019.</p>                
-     </div>
-     <div class="col-md end-md">
-         <p><a href="#">Imprint</a> | <a href="#">Data Protection</a></p>                
-     </div>
- </div>
- <script src="https://cdn.polyfill.io/v2/polyfill.min.js?callback=polyfillsAreLoaded" defer></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="js/script.js" defer></script>
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
 </body>
 </html>
