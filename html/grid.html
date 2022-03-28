@@ -3,138 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <title>Grids</title>
-    <style>
-        @import "https://fonts.googleapis.com/css?family=JetBrains Mono";
-
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #2b2b2b;
-            font-family: 'JetBrains Mono', serif;
-            color: #bbbbbb;
-            font-size: 15px;
-            cursor: default;
-        }
-
-        .grid-item-1 {
-            grid-area: grid-item-1;
-            background-color: #3A3D3F;
-            border-bottom: #303030;
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-        }
-
-        .grid-item-2 {
-            grid-area: grid-item-2;
-            background-color: #3A3D3F;
-            border-right: #303030;
-            border-right-style: solid;
-            border-right-width: 1px;
-        }
-
-        .grid-item-3 {
-            grid-area: grid-item-3;
-            background-color: #3A3D3F;
-            border-bottom: #303030;
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-        }
-
-        .grid-item-4 {
-            grid-area: grid-item-4;
-            background-color: #3A3D3F;
-            border-left: #303030;
-            border-left-style: solid;
-            border-left-width: 1px;
-        }
-
-        .grid-item-5 {
-            grid-area: grid-item-5;
-            background-color: #3A3D3F;
-            border-right: #303030;
-            border-right-style: solid;
-            border-right-width: 1px;
-        }
-
-        .grid-item-6 {
-            grid-area: grid-item-6;
-            background-color: #303133;
-            border-right: #525252;
-            border-right-style: solid;
-            border-right-width: 1px;
-        }
-
-        .grid-item-7 {
-            grid-area: grid-item-7;
-            background-color: #2A2A2A;
-        }
-
-        .grid-item-8 {
-            grid-area: grid-item-8;
-            background-color: #303133;
-            border-top: #525252;
-            border-top-style: solid;
-            border-top-width: 1px;
-        }
-
-        .grid-item-9 {
-            grid-area: grid-item-9 ;
-            background-color: #3c3f41;
-            border-top: #303030;
-            border-top-style: solid;
-            border-top-width: 1px;
-        }
-
-        .item6 {
-            padding-bottom: 5px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: 20px 300px 100px auto 20px;
-            grid-template-areas:
-                'grid-item-1 grid-item-1 grid-item-1 grid-item-1 grid-item-1'
-                'grid-item-2 grid-item-5 grid-item-3 grid-item-3 grid-item-4'
-                'grid-item-2 grid-item-5 grid-item-6 grid-item-7 grid-item-4'
-                'grid-item-2 grid-item-5 grid-item-8 grid-item-8 grid-item-4'
-                'grid-item-9 grid-item-9 grid-item-9 grid-item-9 grid-item-9';
-            padding: 0;
-        }
-
-        .grid-container > div {
-            padding: 3px 5px 5px 5px;
-        }
-
-        .top-menu-item:hover {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
-<div class="grid-container">
-    <div class="grid-item-1">
-        <div class="item6">
-            <span class="top-menu-item"><u>S</u>ocials</span>
-            <span class="top-menu-item"><u>C</u>ontact</span>
-            <span class="top-menu-item"><u>R</u>esume</span>
+<div class="outer-grid-container">
+    <div class="header">
+        <div class="top-menu">
+            <span class="top-menu-item" onclick="init()"><u>S</u>ettings</span>
+            <span class="top-menu-item"><u>B</u>log</span>
         </div>
         <div class="item7">
-            <b>korbiqweidinger.github.io</b> > src >
-            <img src="/img/MarkdownPlugin.svg" alt="" style="vertical-align:-2px">
-            <span style="padding-left: -4px">README.md</span>
+            <span><b>Korbinian Weidinger's Portfolio</b></span>
+            <span>></span>
+            <div class="html-file-icon"></div>
+            <span style="margin-left: -4px">aboutme.html</span>
         </div>
     </div>
-    <div class="grid-item-2">L</div>
-    <div class="grid-item-3">
-        <img src="/img/MarkdownPlugin.svg" alt="" style="vertical-align:-2px">
-        <span style="padding-left: -4px">README.md</span></div>
-    <div class="grid-item-4">R</div>
-    <div class="grid-item-5">Tree</div>
-    <div class="grid-item-6">0<br>1<br>2</div>
-    <div class="grid-item-7">Code</div>
-    <div class="grid-item-8">CF</div>
-    <div class="grid-item-9">Footer</div>
+    <div class="sidebar-left">
+        <div class="project-menu-item" onclick="">
+            <span class="project-text-vertical">Project</span>
+            <div class="folder-icon"></div>
+        </div>
+    </div>
+    <div class="file-bar">
+        <div class="file-item-selected">
+            <div class="html-file-icon margin-top4"></div>
+            <span style="margin-top: 4px;">aboutme.html</span>
+            <div class="close-icon"></div>
+        </div>
+        <div class="file-item-unselected">
+            <div class="class-icon margin-top4"></div>
+            <span style="margin-top: 4px">ContactMe.java</span>
+            <div class="close-icon"></div>
+        </div>
+        <div class="file-item-unselected">
+            <div class="markdown-file-icon"></div>
+            <span style="margin-top: 4px">CV.md</span>
+            <div class="close-icon"></div>
+        </div>
+    </div>
+    <div class="sidebar-right">
+        <div class="github-menu-item" onclick="window.open('https://github.com/KorbiQWeidinger', '_blank');">
+            <div class="github-icon-dark"></div>
+            <span class="github-text">GitHub</span>
+        </div>
+        <div class="linkedin-menu-item"
+             onclick="window.open('https://www.linkedin.com/in/korbinian-weidinger-524b63229/?trk=public_profile_browsemap', '_blank');">
+            <div class="linkedin-icon"></div>
+            <span class="linkedin-text">LinkedIn</span>
+        </div>
+    </div>
+    <div class="file-tree">
+        <div class="project-bar">
+            <div class="project-icon"></div>
+            <div class="project-text">Project</div>
+            <div class="arrow-down-icon-dark"></div>
+            <div class="align-flex-end minimize-icon-dark"></div>
+        </div>
+        <div class="tree">
+            <div class="tree-row">
+                <div class="menu-arrow-icon-dark"></div>
+                <div class="module-directory-icon-dark"></div>
+                <span>Korbinian Weidinger's Portfolio</span>
+            </div>
+            <div class="tree-row2">
+                <div class="menu-arrow-icon-dark"></div>
+                <div class="src-folder-icon"></div>
+                <span>src</span>
+            </div>
+            <div class="tree-row3">
+                <div class="class-icon margin-top2"></div>
+                <span>ContactMe</span>
+            </div>
+            <div class="tree-row2">
+                <div class="markdown-file-icon"></div>
+                <span>ABOUTME.md</span>
+            </div>
+        </div>
+    </div>
+    <div id="markdown-display" class="file-grid-markdown-display">
+    </div>
+    <!-- div class="file-grid">
+        <div class="loc-sidebar">
+            <div class="one-digit">
+                1<br>
+                2<br>
+                3<br>
+                4<br>
+                5<br>
+                6<br>
+                7<br>
+                8<br>
+                9<br>
+            </div>
+            <div class="two-digits">
+                10<br>
+                11<br>
+                12<br>
+                13<br>
+                14<br>
+                15<br>
+                16<br>
+                17<br>
+                18<br>
+                19<br>
+                20<br>
+                21<br>
+                22<br>
+                23<br>
+            </div>
+        </div>
+        <div class="code-area">
+            <span style="color: var(--intellij-purple)">#I write code that humans understand</span>
+            <br>
+            <br>
+            <span style="color: var(--intellij-purple)">##Hi, I am Korbi. Nice to meet you.</span>
+            <br>
+            <br>
+            I write code with a focus on quality and longevity.
+        </div>
+        <div class="file-footer">CF</div>
+    </div-->
+    <div class="footer">
+        <div class="copyright">
+            Ⓒ 2022 Korbinian Quirin Weidinger
+        </div>
+    </div>
 </div>
 </body>
+<script type="text/javascript" src="/js/grid.js"></script>
 </html>

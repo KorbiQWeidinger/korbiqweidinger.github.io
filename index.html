@@ -1,181 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Korbinian Weidinger</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
-<style>
-    body, h1, h2, h3, h4, h5 {
-        font-family: "Poppins", sans-serif
-    }
-
-    body {
-        font-size: 16px;
-    }
-
-    .w3-half img {
-        margin-bottom: -6px;
-        margin-top: 16px;
-        opacity: 0.8;
-        cursor: pointer
-    }
-
-    .w3-half img:hover {
-        opacity: 1
-    }
-</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Grids</title>
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
 <body>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
-     id="mySidebar"><br>
-    <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()">
-        <img src="img/me.jpg" style="width: 100%; height: 100%">
-        <div class="w3-container">
-            <h3 style="padding-bottom: 64px; padding-top: 10px"><b>Korbinian<br>Weidinger</b></h3>
+<div class="outer-grid-container">
+    <div class="header">
+        <div class="top-menu">
+            <span class="top-menu-item" onclick="init()"><u>S</u>ettings</span>
+            <span class="top-menu-item"><u>B</u>log</span>
         </div>
-    </a>
-    <div class="w3-bar-block">
-        <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
-        <a href="#career" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Career</a>
-        <a href="#freelance" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Freelance</a>
-        <a href="#tutoring" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tutoring</a>
-        <a href="#lifestyle" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Lifestyle</a>
+        <div class="item7">
+            <span><b>Korbinian Weidinger's Portfolio</b></span>
+            <span>></span>
+            <div class="html-file-icon"></div>
+            <span style="margin-left: -4px">aboutme.html</span>
+        </div>
     </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
-    <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
-    <span>Korbinian Weidinger</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-     id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-    <div class="w3-container" id="intro">
-        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Introduction</b></h1>
-        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
-        <p>Hi and welcome to my page. I am Korbi and I created this page so you can learn more about me and my
-            services.</p>
-        <p>I have a big passion for software development, I love fitness, cooking, traveling, and much more. You can
-            find out more on this page and the linked platforms - but remember, this is just a glimpse into my life.</p>
-        <br>
-        <table style="width: 100%; text-align: center">
-            <tr>
-                <th>
-                    <a href="https://www.linkedin.com/in/korbinian-weidinger-524b63229/" target="_blank">
-                        <img src="img/linkedin-brands.svg" style="height: 40px; width: 40px" alt=""><br>
-                        Korbinian Weidinger
-                    </a>
-                </th>
-                <th>
-                    <a href="mailto:korbi.weidinger2@gmail.com">
-                        <img src="img/envelope-square-solid.svg" style="height: 40px; width: 40px"><br>
-                        korbi.weidinger2@gmail.com
-                    </a>
-                </th>
-                <th>
-                    <a href="tel:+491728861529">
-                        <img src="img/whatsapp-square-brands.svg" style="height: 40px; width: 40px"><br>
-                        +49 172 8861529
-                    </a>
-                </th>
-            </tr>
-        </table>
+    <div class="sidebar-left">
+        <div class="project-menu-item" onclick="">
+            <span class="project-text-vertical">Project</span>
+            <div class="folder-icon"></div>
+        </div>
     </div>
-
-    <div class="w3-container" style="margin-top:40px" id="career">
-        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Career</b></h1>
-        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
-
-        <p>You can read the detailed journey about my career here or download my resume for a short summary.</p>
-        <a href="img/lebenslauf_korbinian_weidinger.pdf" download="lebenslauf_korbinian_weidinger.pdf"
-           class="w3-button w3-grey w3-padding-large w3-section" style="width: 280px">
-            <img src="img/download-solid.svg" style="height: 25px; width: 25px">&nbsp;&nbsp;&nbsp;Download Resume (DE)
-        </a>
-        <a href="img/lebenslauf_korbinian_weidinger.pdf" download="lebenslauf_korbinian_weidinger.pdf"
-           class="w3-button w3-grey w3-padding-large w3-section" style="width: 280px">
-            <img src="img/download-solid.svg" style="height: 25px; width: 25px">&nbsp;&nbsp;&nbsp;Download Resume (ENG)
-        </a>
-        <h1 class="w3-xlarge" style="color: #b524c0"><b>Technische Universität München</b></h1>
-        I am currently (01.2022) finishing my B.Sc. in Computer Science at TUM and am accepted to start my M.Sc. in
-        Computer Science this summer (05.2022). I discovered my passion for programming in an orientation course at TUM
-        in 16/17 were we used python and a raspberry pi. I started my B.Sc. in Computer Science in 17.
-        There are some things I believe to be worth mentioning regarding my studies at TUM.
-        In winter 19/20 I participated in the iInternship where I was taught swift for iOS development and was part of a
-        team of 7 students that developed an iOS app for ZEISS. I afterwards chose to be a tutor teaching swift to
-        fellow students and gave a presentation on how to develop a secure login service with server side swift.
-        In winter 20/21 I was a tutor for functional programming and verification.
-        More on my love for teaching <a href="#tutoring">here</a>.
-
-        <h1 class="w3-xlarge" style="color: #b524c0; padding-top: 15px"><b>Anarcon</b></h1>
-        After my first semester in my B.Sc. in Computer Science at TUM I started my first job related to my career at
-        the consulting company <a href="https://anarcon.de/" target="_blank">anarcon</a>. I was very fortunate to be
-        part of the
-        creation of a team of developers where I learned how to set up a scrum team, create a build and deployment
-        pipline for continuous integration with the atlassian products. Special thanks go to head of the team Alex who
-        taught me a lot about programming, system design and how to work in an agile team.
-        As a team we developed various plugins for Jira and Confluence which additionally taught me a lot about the
-        Atlassian products. For my final tasks at anarcon I developed two plugins for Jira by myself.
-
-        <h1 class="w3-xlarge" style="color: #b524c0; padding-top: 15px"><b>CQSE</b></h1>
-        After two years at anarcon I wanted to experience something new and decided to follow my love for programming
-        and clean code. I was happy to get a job at <a href="https://www.cqse.eu/en/" target="_blank">CQSE</a> were I
-        was eager to learn more about Continuous Quality in Software Engineering. I spent most of my time developing for
-        their Software Intelligence Platform Teamscale which taught me a lot about quality metrics in different
-        programming languages. I was also fortunate to write my bachelor thesis about the impact of static analysis on
-        code quality in OSS projects at CQSE. You can find out more about my Bachelor Thesis
-        <a href="https://github.com/KorbiQWeidinger/LinterDetectionTool" target="_blank">here</a>.
-        <br>
-        ...
+    <div class="file-bar">
+        <div class="file-item-selected">
+            <div class="html-file-icon margin-top4"></div>
+            <span style="margin-top: 4px;">aboutme.html</span>
+            <div class="close-icon"></div>
+        </div>
+        <div class="file-item-unselected">
+            <div class="class-icon margin-top4"></div>
+            <span style="margin-top: 4px">ContactMe.java</span>
+            <div class="close-icon"></div>
+        </div>
+        <div class="file-item-unselected">
+            <div class="markdown-file-icon"></div>
+            <span style="margin-top: 4px">CV.md</span>
+            <div class="close-icon"></div>
+        </div>
     </div>
-
-    <div class="w3-container" style="margin-top:80px" id="freelance">
-        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Freelance</b></h1>
-        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
-
-        <p>Coming soon...</p>
+    <div class="sidebar-right">
+        <div class="github-menu-item" onclick="window.open('https://github.com/KorbiQWeidinger', '_blank');">
+            <div class="github-icon-dark"></div>
+            <span class="github-text">GitHub</span>
+        </div>
+        <div class="linkedin-menu-item"
+             onclick="window.open('https://www.linkedin.com/in/korbinian-weidinger-524b63229/?trk=public_profile_browsemap', '_blank');">
+            <div class="linkedin-icon"></div>
+            <span class="linkedin-text">LinkedIn</span>
+        </div>
     </div>
-
-    <div class="w3-container" style="margin-top:80px" id="tutoring">
-        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Tutoring</b></h1>
-        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
-
-        <p>Coming soon...</p>
+    <div class="file-tree">
+        <div class="project-bar">
+            <div class="project-icon"></div>
+            <div class="project-text">Project</div>
+            <div class="arrow-down-icon-dark"></div>
+            <div class="align-flex-end minimize-icon-dark"></div>
+        </div>
+        <div class="tree">
+            <div class="tree-row">
+                <div class="menu-arrow-icon-dark"></div>
+                <div class="module-directory-icon-dark"></div>
+                <span>Korbinian Weidinger's Portfolio</span>
+            </div>
+            <div class="tree-row2">
+                <div class="menu-arrow-icon-dark"></div>
+                <div class="src-folder-icon"></div>
+                <span>src</span>
+            </div>
+            <div class="tree-row3">
+                <div class="class-icon margin-top2"></div>
+                <span>ContactMe</span>
+            </div>
+            <div class="tree-row2">
+                <div class="markdown-file-icon"></div>
+                <span>ABOUTME.md</span>
+            </div>
+        </div>
     </div>
-
-    <div class="w3-container" style="margin-top:80px" id="lifestyle">
-        <h1 class="w3-xxxlarge" style="color: #b524c0"><b>Lifestyle</b></h1>
-        <hr style="width:50px;border:5px solid #9d1dc4" class="w3-round">
-
-        <p>Coming soon...</p>
+    <div id="markdown-display" class="file-grid-markdown-display">
     </div>
-
-    <br>
-    <br>
-
-    <div class="w3-black w3-container"><p class="w3-center">This page was created by <b>Korbinian Weidinger</b></p>
+    <!-- div class="file-grid">
+        <div class="loc-sidebar">
+            <div class="one-digit">
+                1<br>
+                2<br>
+                3<br>
+                4<br>
+                5<br>
+                6<br>
+                7<br>
+                8<br>
+                9<br>
+            </div>
+            <div class="two-digits">
+                10<br>
+                11<br>
+                12<br>
+                13<br>
+                14<br>
+                15<br>
+                16<br>
+                17<br>
+                18<br>
+                19<br>
+                20<br>
+                21<br>
+                22<br>
+                23<br>
+            </div>
+        </div>
+        <div class="code-area">
+            <span style="color: var(--intellij-purple)">#I write code that humans understand</span>
+            <br>
+            <br>
+            <span style="color: var(--intellij-purple)">##Hi, I am Korbi. Nice to meet you.</span>
+            <br>
+            <br>
+            I write code with a focus on quality and longevity.
+        </div>
+        <div class="file-footer">CF</div>
+    </div-->
+    <div class="footer">
+        <div class="copyright">
+            Ⓒ 2022 Korbinian Quirin Weidinger
+        </div>
     </div>
 </div>
-
-
-<script>
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
-</script>
 </body>
+<script type="text/javascript" src="/js/grid.js"></script>
 </html>
