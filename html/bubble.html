@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #181818;
+        font-family: Arial;
+    }
+
+    .circle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #ffffff;
+        text-shadow: 1px 1px #212121;
+        text-align: center;
+        background: radial-gradient(circle, rgb(117, 125, 131) 0%, rgb(37, 37, 37) 85%, rgba(0, 0, 0, 1) 100%);
+        cursor: grab;
+    }
+</style>
+<body>
+</body>
+<script>
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    const moveListener = (e) => {
+        let circle = e.currentTarget
+        if (circle.move) {
+            circle.style.left = e.pageX - 50 + 'px'
+            circle.style.top = e.pageY - 50 + 'px'
+        }
+    }
+
+    const downListener = (e) => {
+        let circle = e.currentTarget
+        circle.move = true
+    }
+
+    const upListener = (e) => {
+        let circle = e.currentTarget
+        circle.move = false
+    }
+
+    const mouseoverListener = async (e) => {
+        let circle = e.currentTarget
+        circle.bulb = true
+    }
+
+    function createCircle(id, width, height, left = 0, top = 0) {
+
+        let circle = document.createElement('div')
+        circle.classList.add('circle')
+        circle.id = 'circle' + id
+
+        circle.style.width = width + 'px'
+        circle.style.height = height + 'px'
+        circle.style.left = left + 'px'
+        circle.style.top = top + 'px'
+
+        circle.move = false
+        circle.bulb = false
+        bulb(circle)
+
+        circle.addEventListener('mousedown', downListener)
+        circle.addEventListener('mousemove', moveListener)
+        circle.addEventListener('mouseup', upListener)
+        circle.addEventListener("mouseover", mouseoverListener);
+
+        return circle
+    }
+
+    document.body.insertAdjacentElement("afterbegin", createCircle(1, 100, 100, 20, 40))
+    document.body.insertAdjacentElement("afterbegin", createCircle(2, 100, 100, 200, 200))
+    document.body.insertAdjacentElement("afterbegin", createCircle(3, 150, 150, 300, 300))
+
+
+    async function bulb(circle) {
+        while (true) {
+            if (circle.bulb) {
+                const pixels = getRandomInt(7)
+                const bulbSpeed = getRandomInt(80) + 80
+                const steps = getRandomInt(4) + 2
+                for (let i = 0; i <= steps; i++) {
+                    grow(circle, pixels + i)
+                    await sleep(bulbSpeed)
+                }
+                for (let i = 0; i <= steps; i++) {
+                    grow(circle, -1 * pixels - i)
+                    await sleep(bulbSpeed)
+                }
+                if (getRandomInt(5) === 0) {
+                    circle.bulb = false
+                }
+            }
+            if (!circle.bulb) {
+                await sleep(400)
+                if (getRandomInt(10) === 0) {
+                    circle.bulb = true
+                }
+            }
+        }
+    }
+
+    async function hover(circle) {
+
+    }
+
+    function grow(circle, pixel) {
+        const oldWidth = parseInt(circle.style.width.replace('px', ''))
+        const oldHeight = parseInt(circle.style.height.replace('px', ''))
+        const oldLeft = parseInt(circle.style.left.replace('px', ''))
+        const oldTop = parseInt(circle.style.top.replace('px', ''))
+
+        circle.style.width = oldWidth + pixel + 'px'
+        circle.style.height = oldHeight + pixel + 'px'
+        circle.style.left = oldLeft - pixel / 2 + 'px'
+        circle.style.top = oldTop - pixel / 2 + 'px'
+    }
+
+    let circle1 = document.getElementById('circle1')
+
+</script>
+</html>

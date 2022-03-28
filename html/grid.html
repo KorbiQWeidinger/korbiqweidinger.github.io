@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grids</title>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=JetBrains Mono";
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2b2b2b;
+            font-family: 'JetBrains Mono', serif;
+            color: #bbbbbb;
+            font-size: 15px;
+            cursor: default;
+        }
+
+        .grid-item-1 {
+            grid-area: grid-item-1;
+            background-color: #3A3D3F;
+            border-bottom: #303030;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+
+        .grid-item-2 {
+            grid-area: grid-item-2;
+            background-color: #3A3D3F;
+            border-right: #303030;
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+
+        .grid-item-3 {
+            grid-area: grid-item-3;
+            background-color: #3A3D3F;
+            border-bottom: #303030;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+
+        .grid-item-4 {
+            grid-area: grid-item-4;
+            background-color: #3A3D3F;
+            border-left: #303030;
+            border-left-style: solid;
+            border-left-width: 1px;
+        }
+
+        .grid-item-5 {
+            grid-area: grid-item-5;
+            background-color: #3A3D3F;
+            border-right: #303030;
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+
+        .grid-item-6 {
+            grid-area: grid-item-6;
+            background-color: #303133;
+            border-right: #525252;
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+
+        .grid-item-7 {
+            grid-area: grid-item-7;
+            background-color: #2A2A2A;
+        }
+
+        .grid-item-8 {
+            grid-area: grid-item-8;
+            background-color: #303133;
+            border-top: #525252;
+            border-top-style: solid;
+            border-top-width: 1px;
+        }
+
+        .grid-item-9 {
+            grid-area: grid-item-9 ;
+            background-color: #3c3f41;
+            border-top: #303030;
+            border-top-style: solid;
+            border-top-width: 1px;
+        }
+
+        .item6 {
+            padding-bottom: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20px 300px 100px auto 20px;
+            grid-template-areas:
+                'grid-item-1 grid-item-1 grid-item-1 grid-item-1 grid-item-1'
+                'grid-item-2 grid-item-5 grid-item-3 grid-item-3 grid-item-4'
+                'grid-item-2 grid-item-5 grid-item-6 grid-item-7 grid-item-4'
+                'grid-item-2 grid-item-5 grid-item-8 grid-item-8 grid-item-4'
+                'grid-item-9 grid-item-9 grid-item-9 grid-item-9 grid-item-9';
+            padding: 0;
+        }
+
+        .grid-container > div {
+            padding: 3px 5px 5px 5px;
+        }
+
+        .top-menu-item:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="grid-item-1">
+        <div class="item6">
+            <span class="top-menu-item"><u>S</u>ocials</span>
+            <span class="top-menu-item"><u>C</u>ontact</span>
+            <span class="top-menu-item"><u>R</u>esume</span>
+        </div>
+        <div class="item7">
+            <b>korbiqweidinger.github.io</b> > src >
+            <img src="/img/MarkdownPlugin.svg" alt="" style="vertical-align:-2px">
+            <span style="padding-left: -4px">README.md</span>
+        </div>
+    </div>
+    <div class="grid-item-2">L</div>
+    <div class="grid-item-3">
+        <img src="/img/MarkdownPlugin.svg" alt="" style="vertical-align:-2px">
+        <span style="padding-left: -4px">README.md</span></div>
+    <div class="grid-item-4">R</div>
+    <div class="grid-item-5">Tree</div>
+    <div class="grid-item-6">0<br>1<br>2</div>
+    <div class="grid-item-7">Code</div>
+    <div class="grid-item-8">CF</div>
+    <div class="grid-item-9">Footer</div>
+</div>
+</body>
+</html>

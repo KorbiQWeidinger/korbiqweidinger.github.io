@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Quote</title>
+</head>
+<style>
+    @import "https://fonts.googleapis.com/css?family=JetBrains Mono";
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #2b2b2b;
+    }
+
+    .code {
+        font-family: 'JetBrains Mono', serif;
+        color: #869299;
+    }
+
+    #quote {
+        font-size: xx-large;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        width: 0;
+        height: 0;
+    }
+
+    .line__1,
+    .line__2,
+    .line__3,
+    .line__4,
+    .line__5 {
+        white-space: nowrap; /* keep text in one line */
+        overflow: hidden; /* hide text behind the cursor */
+        margin: 0.5rem auto;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .line__1 {
+        border-right: 3px solid rgb(43, 43, 43);
+        animation: animated-text__1 1s steps(15, end) 1s 1 normal both,
+        animated-cursor 900ms steps(15, end) 3;
+    }
+
+    .line__2 {
+        padding-left: 62px;
+        border-right: 3px solid rgb(43, 43, 43);
+
+        animation: animated-text__2 1s steps(15, end) 1s 1 normal both,
+        animated-cursor 900ms steps(15, end) 2;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+    }
+
+    .line__3 {
+        padding-left: 62px;
+        border-right: 3px solid rgb(43, 43, 43);
+
+        animation: animated-text__3 1s steps(15, end) 1s 1 normal both,
+        animated-cursor 900ms steps(15, end) 2;
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    }
+
+    .line__4 {
+        padding-left: 62px;
+        border-right: 3px solid rgb(43, 43, 43);
+
+        animation: animated-text__4 1s steps(15, end) 1s 1 normal both,
+        animated-cursor 900ms steps(15, end) 2;
+        -webkit-animation-delay: 7s;
+        animation-delay: 7s;
+    }
+
+    .line__5 {
+        border-right: 3px solid rgb(43, 43, 43);
+
+        animation: animated-text__5 5ms steps(15, end) 1s 1 normal both,
+        animated-cursor 900ms steps(15, end) infinite;
+        -webkit-animation-delay: 9s;
+        animation-delay: 9s;
+    }
+
+    @keyframes animated-cursor {
+        from {
+            border-right-color: rgba(255, 255, 255, 0.8);
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+
+    /* This is for changing how much text is shown*/
+    @keyframes animated-text__1 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 24rem;
+        }
+    }
+
+    @keyframes animated-text__2 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 15rem;
+        }
+    }
+
+    @keyframes animated-text__3 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 16rem;
+        }
+
+    }
+
+    @keyframes animated-text__4 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 17.5rem;
+        }
+
+    }
+
+    @keyframes animated-text__5 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 1.3rem;
+        }
+
+    }
+
+    .jetbrains-orange {
+        color: #c0662f;
+    }
+
+    .jetbrains-link:hover {
+        text-decoration: underline;
+        color: #3270b9;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+
+
+<div class="code" id="quote">
+    <p class="line__1">
+        <span class="jetbrains-orange">if</span>(<span class="jetbrains-link">korbi</span>.<span class="jetbrains-link">awake</span>())
+        {
+    </p>
+    <p class="line__2">
+        <span class="jetbrains-link">korbi</span>.<span class="jetbrains-link">eat</span>()<span class="jetbrains-orange">;</span>
+    </p>
+    <p class="line__3">
+        <span class="jetbrains-link">korbi</span>.<span class="jetbrains-link">code</span>()<span class="jetbrains-orange">;</span>
+    </p>
+    <p class="line__4">
+        <span class="jetbrains-link">korbi</span>.<span class="jetbrains-link">train</span>()<span class="jetbrains-orange">;</span>
+    </p>
+    <p class="line__5">}</p>
+</div>
+</body>
+</html>
