@@ -8,4 +8,25 @@
     --intellij-blue2: #3E86A0;
     --intellij-purple: #9376AA;
     --intellij-dark-white: #bbbbbb;
+    --intellij-orange: #CC7832;
+}
+
+.tc-intellij-purple {
+    color: var(--intellij-purple);
+}
+
+.tc-intellij-white {
+    color: var(--intellij-dark-white);
+}
+
+.bc-intellij-gray1 {
+    background-color: var(--intellij-gray1);
+}
+
+.bc-intellij-dark-gray2 {
+    background-color: var(--intellij-dark-gray2);
+}
+
+.ta-center {
+    text-align: center;
 }

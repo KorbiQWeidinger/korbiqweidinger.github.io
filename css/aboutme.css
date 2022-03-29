@@ -1,0 +1,263 @@
+#about-me-title {
+    padding: 40px 0 20px 0;
+    font-size: 50px;
+}
+
+#about-me-subtitle {
+    padding-bottom: 8%;
+    font-size: 30px;
+}
+
+#codepen-button {
+    visibility: hidden;
+    margin-left: 89%;
+    margin-top: 4%;
+    z-index: 5;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    border-radius: 1rem;
+    border-color: var(--intellij-purple);
+    border-style: solid;
+}
+
+#codepen-button:hover {
+    cursor: pointer;
+    background-color: var(--intellij-purple);
+}
+
+#about-me:hover #codepen-button {
+    visibility: visible;
+}
+
+#codepen-logo {
+    padding: 7px 0 0 7px;
+    font-size: 33px;
+    color: var(--intellij-purple);
+}
+
+#codepen-button:hover #codepen-logo {
+    color: var(--intellij-dark-gray2);
+}
+
+#say-hello-button {
+    visibility: hidden;
+    margin-left: 6%;
+    margin-top: 4%;
+    z-index: 5;
+    position: fixed;
+    width: auto;
+    height: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    border-color: var(--intellij-purple);
+    border-style: solid;
+}
+
+#say-hello-button:hover {
+    cursor: pointer;
+    background-color: var(--intellij-purple);
+}
+
+#say-hello-button:hover #say-hello-text {
+    color: var(--intellij-dark-gray2);
+}
+
+#say-hello-text {
+    margin-top: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+#about-me:hover #say-hello-button {
+    visibility: visible;
+}
+
+.img-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9rem;
+    width: 25rem;
+    height: 15rem;
+}
+
+.round-image {
+    width: 25rem;
+    height: 17rem;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 14rem 14rem 0 0;
+    object-position: 0 80%;
+    border: var(--intellij-purple);
+    border-style: solid;
+    border-width: 4px;
+}
+
+.purple-div {
+    width: 75%;
+    text-align: center;
+    background-color: #9376AA;
+    font-size: 35px;
+    padding-top: 10px;
+    color: #2A2A2A;
+    padding-bottom: 10px;
+    margin-top: -7rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.aboutme-text {
+    text-align: center;
+    color: var(--intellij-dark-white);
+    font-size: 20px;
+    padding: 2%;
+}
+
+#email-popup-form-wrapper {
+    visibility: hidden;
+    z-index: 6;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(147, 118, 170, 0.63);
+}
+
+#email-popup-form {
+    visibility: hidden;
+    z-index: 7;
+    position: fixed;
+    margin-left: 20vw;
+    margin-top: 20vh;
+    width: 60vw;
+    height: 60vh;
+    background-color: var(--intellij-dark-gray2);
+    border-radius: 2rem;
+    border-color: var(--intellij-purple);
+    border-style: solid;
+}
+
+
+.skills {
+    display: grid;
+    grid-template: auto auto auto / 33% 34% 33%;
+    grid-template-areas:
+            'skill-section11 skill-section12 skill-section13'
+            'skill-section21 skill-section22 skill-section23'
+            'skill-section31 skill-section32 skill-section33';
+    font-family: "JetBrains Mono", serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    border: var(--intellij-purple);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 30px;
+    box-shadow: 3px 3px rgba(42, 42, 42, 0.1);
+    background-color: var(--intellij-dark-gray2);
+}
+
+.skill-section11 {
+    grid-area: skill-section11;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section12 {
+    grid-area: skill-section12;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section13 {
+    grid-area: skill-section13;
+}
+
+.skill-section21 {
+    grid-area: skill-section21;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section22 {
+    grid-area: skill-section22;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section23 {
+    grid-area: skill-section23;
+}
+
+.skill-section31 {
+    grid-area: skill-section31;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section32 {
+    grid-area: skill-section32;
+    border-right: var(--intellij-purple);
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+.skill-section33 {
+    grid-area: skill-section33;
+}
+
+.skill-title {
+    color: var(--intellij-purple);
+    text-align: center;
+    font-size: 35px;
+}
+
+.skill-icon {
+    background-size: 5rem 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 1.5rem auto;
+}
+
+.skill-hr {
+    background-color: var(--intellij-purple);
+    height: 1px;
+    border: none;
+    width: 70%;
+}
+
+.skill-message {
+    margin: 0.2rem auto;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.skill-subtitle {
+    color: var(--intellij-purple);
+    text-align: center;
+    font-size: 20px;
+    padding-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
+}
+
+#recent-work {
+    margin-top: 10%;
+}
+
+#recent-work-title {
+    text-align: center;
+    color: var(--intellij-purple);
+    font-size: 40px;
+}

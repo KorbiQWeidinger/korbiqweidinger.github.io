@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grids</title>
+    <title>KW | Software Developer</title>
+    <link rel="icon"
+          type="image/png"
+          href="/korbiqweidinger.github.io/favicon.ico">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/icons.css">
     <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/aboutme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
-<div class="outer-grid-container">
+<div id="outer-grid-container" class="outer-grid-container">
     <div class="header">
         <div class="top-menu">
             <span class="top-menu-item" onclick="init()"><u>S</u>ettings</span>
             <span class="top-menu-item"><u>B</u>log</span>
         </div>
-        <div class="top-file-path">
+        <div id="top-file-path" class="top-file-path">
             <span><b>Korbinian Weidinger's Portfolio</b></span>
             <span>></span>
             <div id="top-file-item" class="top-file-item">
@@ -25,7 +29,7 @@
         </div>
     </div>
     <div class="sidebar-left">
-        <div class="project-menu-item" onclick="">
+        <div class="project-menu-item" onclick="open_project_tree()">
             <span class="project-text-vertical">Project</span>
             <div class="folder-icon"></div>
         </div>
@@ -58,12 +62,12 @@
             <span class="linkedin-text">LinkedIn</span>
         </div>
     </div>
-    <div class="file-tree">
+    <div id="file-tree" class="file-tree">
         <div class="project-bar">
             <div class="project-icon"></div>
             <div class="project-text">Project</div>
             <div class="arrow-down-icon-dark"></div>
-            <div class="align-flex-end minimize-icon-dark"></div>
+            <div id="minimize-tree" class="align-flex-end minimize-icon-dark" onclick="open_project_tree()"></div>
         </div>
         <div class="tree">
             <div class="tree-row">

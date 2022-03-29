@@ -8,6 +8,7 @@ body {
     color: var(--intellij-dark-white);
     font-size: 25px;
     cursor: default;
+    background-color: var(--intellij-dark-gray2);
 }
 
 .outer-grid-container {
@@ -245,4 +246,8 @@ body {
 
 .top-file-item {
     display: flex;
+}
+
+#minimize-tree:hover {
+    cursor: pointer;
 }

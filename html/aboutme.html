@@ -1,96 +1,59 @@
-<div>
-    <style>
-        .aboutme > .title {
-            padding: 40px 0 20px 0;
-            background-color: var(--intellij-dark-gray2);
-            text-align: center;
-            color: var(--intellij-purple);
-            font-size: 50px;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="icon"
+          type="image/png"
+          href="/korbiqweidinger.github.io/favicon.ico">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/aboutme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<style>
+    html {
+        overflow-y: scroll;
+    }
+</style>
+<div id="about-me">
 
-        .aboutme > .subtitle {
-            padding-bottom: 10%;
-            background-color: var(--intellij-dark-gray2);
-            text-align: center;
-            color: var(--intellij-dark-white);
-            font-size: 30px;
-        }
-
-        .aboutme:hover .switch-view-menu {
-            visibility: visible;
-        }
-
-        .switch-view-menu {
-            visibility: hidden;
-            margin-left: 92%;
-            margin-top: 2%;
-            z-index: 1000;
-            position: relative;
-            width: 6rem;
-            height: 3rem;
-            background-color: var(--intellij-gray1);
-            border-radius: 7px;
-            display: flex;
-        }
-
-        .img-container {
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 9rem;
-            width: 25rem;
-            height: 15rem;
-        }
-
-        .round-image {
-            width: 25rem;
-            height: 17rem;
-            overflow: hidden;
-            object-fit: cover;
-            border-radius: 14rem 14rem 0 0;
-            object-position: 0 80%;
-        }
-
-        .purple-div {
-            text-align: center;
-            background-color: #9376AA;
-            font-size: 35px;
-            padding-top: 10px;
-            color: #2A2A2A;
-            padding-bottom: 10px;
-            margin-top: -7rem;
-            z-index: 1000;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .aboutme-text {
-            text-align: center;
-            color: var(--intellij-dark-white);
-            font-size: 20px;
-            padding: 2%;
-        }
-
-        .layout-editor-icon-wrapper {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 7px;
-        }
-
-        .layout-editor-icon-wrapper:hover {
-            background-color: #4C5051;
-        }
-    </style>
-    <div class="aboutme">
-
-        <div class="switch-view-menu">
-            <div class="layout-editor-icon-wrapper" onclick="load_external_html_into('#markdown-display', '/html/code_quote.html')"><div class="layout-editor-icon"></div></div>
-            <div class="layout-editor-icon-wrapper"><div class="image-icon"></div></div>
+    <div id="codepen-button" class="bc-intellij-dark-gray2">
+        <div id="codepen-logo" class="tc-intellij-purple" onclick="window.open('https://codepen.io/korbiqweidinger/pen/WNXVgdw', '_blank');">
+            <i class="fa fa-codepen" aria-hidden="true"></i>
         </div>
+    </div>
 
-        <div class="title">Full-Stack Developer, Designer & Tutor</div>
-        <div class="subtitle">I write beautifully simple code that even humans understand easily!</div>
+    <div id="say-hello-button" class="bc-intellij-dark-gray2">
+        <div id="say-hello-text" class="tc-intellij-purple">Say Hello</div>
+    </div>
 
+    <div id="email-popup-form-wrapper">
+        <div id="email-popup-form">
+            <div id="email-popup-header center-text"></div>
+            <div class="email-popup1">
+                Name
+            </div>
+            <div class="email-popup2">
+
+            </div>
+            <div class="email-popup3">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="introduction">
+
+        <div id="about-me-title" class="tc-intellij-purple ta-center">Software Developer, Designer & Tutor</div>
+        <div id="about-me-subtitle" class="tc-intellij-white ta-center">I write beautifully simple code that even humans understand easily!</div>
+
+        <div id="code-quote-wrapper"></div>
+
+        <div style="padding: 3%"></div>
 
         <div class="img-container">
             <img class="round-image" src="/img/me.png" alt="">
@@ -101,21 +64,106 @@
         </div>
 
         <div class="aboutme-text">
-            Since the beginning of my carrier as a software developer in 2017 the concepts of <b>Clean Code</b> and
-            <b>TDD</b> were preached to me.<br>
-            Ever since I worked hard to improve my skills and implement these concepts into my daily development tasks.
+            I am a software developer from Munich Germany.
             <br>
             <br>
-            Since 2018 I am working as a software developer next to acquiring a degree in Computer Science. <br>
-            I am currently doing my M.Sc. in Informatics @ TUM.
+            I love writing quality code by implementing concepts like <b>Clean Code</b> and
+            <b>TDD</b> that were preached to me since I started in 2017.<br>
+            Ever since I work hard on improving my skills and implementing these concepts into my daily development tasks.
+            <br>
+            <br>
+            Since 2018 I am working as a software developer while acquiring a degree in Computer Science. <br>
+            I am currently doing my M.Sc. in Informatics at TUM.
             <br><br>
-            I've done remote work since 2019, as consultant, frontend-developer and collaborated with talented people to
-            create digital products for both business and consumer use. <br>
             I'm confident, naturally curious, and perpetually working on improving my chops one coding problem at a
             time.
         </div>
     </div>
-</div>
 
+    <div id="skills-section"
+         style="padding: 10rem; background-color: var(--intellij-dark-gray2); background-image: linear-gradient(175deg, rgba(42,42,42,1) 20%, rgba(147,118,170,1) 100%);">
+
+        <div class="skills">
+            <div class="skill-section11">
+                <div class="skill-icon designer-icon"></div>
+                <div class="skill-title"><b>Designer</b></div>
+                <hr class="skill-hr">
+                <div class="skill-message">I value simple content structure, clean design patterns, and thoughtful
+                    interactions.
+                </div>
+            </div>
+            <div class="skill-section21">
+                <div class="skill-subtitle">Things I enjoy designing:</div>
+                <div class="skill-message">UX, UI, Web, Mobile, Apps, Logos</div>
+            </div>
+            <div class="skill-section31">
+                <div class="skill-subtitle">Design Tools:</div>
+                <div class="skill-message">Photoshop</div>
+                <div class="skill-message hover-pointer reduce-margin-top1rem"
+                     onclick="window.open('https://app.diagrams.net/', '_blank')">Draw.io
+                </div>
+                <div class="skill-message hover-pointer reduce-margin-top1rem"
+                     onclick="window.open('https://www.figma.com/', '_blank')">Figma
+                </div>
+                <div class="skill-message">Pen & Paper</div>
+            </div>
+            <div class="skill-section12">
+                <div class="skill-icon developer-icon"></div>
+                <div class="skill-title"><b>Developer</b></div>
+                <hr class="skill-hr">
+                <div class="skill-message">I like to code beautiful things, and enjoy bringing (your) ideas to life.
+                </div>
+            </div>
+            <div class="skill-section22">
+                <div class="skill-subtitle">Languages I speak:</div>
+                <div class="skill-message">Java, Python, JavaScript, SQL, Kotlin, Haskell, OCaml, C, C++</div>
+            </div>
+            <div class="skill-section32">
+                <div class="skill-subtitle">Dev Tools:</div>
+                <div class="skill-message">Git</div>
+                <div class="skill-message">Jetbrains IDEs</div>
+                <div class="skill-message">VSCode</div>
+                <div class="skill-message">Jira</div>
+                <div class="skill-message">Codepen</div>
+                <div class="skill-message">Github</div>
+                <div class="skill-message">Gitlab</div>
+                <div class="skill-message">...</div>
+            </div>
+            <div class="skill-section13">
+                <div class="skill-icon tutor-icon"></div>
+                <div class="skill-title"><b>Tutor</b></div>
+                <hr class="skill-hr">
+                <div class="skill-message">I genuinely care about people, and love helping fellow developers work on
+                    their craft.
+                </div>
+            </div>
+            <div class="skill-section23">
+                <div class="skill-subtitle">Experiences I draw from:</div>
+                <div class="skill-message">Math Tutoring Background, Work Experience, University</div>
+            </div>
+            <div class="skill-section33">
+                <div class="skill-subtitle">Tutoring Stats:</div>
+                <div class="skill-message">7 Years Experience</div>
+                <div class="skill-message">50+ Successful Students</div>
+                <div class="skill-message">1000+ Hours</div>
+                <div class="skill-message">3 Math Bootcamps</div>
+                <div class="skill-message">Tutor for FPV at TUM</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="recent-work">
+        <div id="recent-work-title">My Recent Work</div>
+
+    </div>
+
+    <div style="padding: 4%"></div>
+</div>
+</body>
+<script type="text/javascript" src="/js/grid.js"></script>
+<script>
+    load_external_html_into('code-quote-wrapper', '/html/code_quote.html')
+</script>
+</html>
 
 
