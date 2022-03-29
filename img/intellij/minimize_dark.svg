@@ -1,0 +1,6 @@
+<svg width='16' height='16' viewBox='0,0,16,16' xmlns='http://www.w3.org/2000/svg'>
+    <g>
+        <path d='M0,0L16,0L16,16L0,16Z' fill='#FFFFFF' opacity='0'/>
+        <path d='M2,7L14,7L14,9L2,9Z' fill='#bbbbbb'/>
+    </g>
+</svg>

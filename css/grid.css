@@ -81,6 +81,12 @@ body {
     grid-area: file-grid;
     background-color: var(--intellij-dark-gray2);
     overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.file-grid-markdown-display::-webkit-scrollbar {
+    display: none;
 }
 
 .loc-sidebar {
