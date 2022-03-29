@@ -12,7 +12,7 @@ body {
 
 .outer-grid-container {
     display: grid;
-    grid-template: auto auto minmax(0, 1fr) 40px / 40px 0 minmax(0, 1fr) auto;
+    grid-template: auto auto minmax(0, 1fr) 30px / 40px 0 minmax(0, 1fr) 40px;
     height: 100vh;
     grid-template-areas:
             'header header header header'
@@ -124,7 +124,7 @@ body {
     padding-left: 1px;
 }
 
-.item7 {
+.top-file-path {
     display: flex;
 }
 
@@ -147,7 +147,7 @@ body {
     padding: 3px 5px 0 5px;
 }
 
-.item7 > span {
+.top-file-path > span {
     padding-left: 3px;
     padding-right: 3px;
 }
@@ -235,4 +235,8 @@ body {
 
 .one-digit {
     padding-left: 14px;
+}
+
+.top-file-item {
+    display: flex;
 }
