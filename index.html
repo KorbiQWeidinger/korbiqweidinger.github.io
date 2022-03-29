@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grids</title>
+    <title>KorbiQWeidinger</title>
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/icons.css">
     <link rel="stylesheet" href="/css/colors.css">
@@ -18,8 +18,10 @@
         <div class="top-file-path">
             <span><b>Korbinian Weidinger's Portfolio</b></span>
             <span>></span>
-            <div class="html-file-icon"></div>
-            <span style="margin-left: -4px">aboutme.html</span>
+            <div id="top-file-item" class="top-file-item">
+                <div id="top-file-item-image" class="html-file-icon"></div>
+                <div id="top-file-item-text" style="margin-left: -4px">aboutme.html</div>
+            </div>
         </div>
     </div>
     <div class="sidebar-left">
@@ -29,18 +31,18 @@
         </div>
     </div>
     <div class="file-bar">
-        <div class="file-item-selected">
+        <div id="aboutme-file-item" class="file-item-selected" onclick="select_new_file('aboutme-file-item'); change_selected_file_in_top('html-file-icon', 'aboutme.html');">
             <div class="html-file-icon margin-top4"></div>
             <span style="margin-top: 4px;">aboutme.html</span>
             <div class="close-icon"></div>
         </div>
-        <div class="file-item-unselected">
+        <div id="contactme-file-item" class="file-item-unselected" onclick="select_new_file('contactme-file-item'); change_selected_file_in_top('class-icon', 'ContactMe.java');">
             <div class="class-icon margin-top4"></div>
             <span style="margin-top: 4px">ContactMe.java</span>
             <div class="close-icon"></div>
         </div>
-        <div class="file-item-unselected">
-            <div class="markdown-file-icon"></div>
+        <div id="cv-file-item" class="file-item-unselected" onclick="select_new_file('cv-file-item'); change_selected_file_in_top('markdown-file-icon', 'CV.md');">
+            <div class="markdown-file-icon margin-top4"></div>
             <span style="margin-top: 4px">CV.md</span>
             <div class="close-icon"></div>
         </div>
@@ -84,8 +86,7 @@
             </div>
         </div>
     </div>
-    <div id="markdown-display" class="file-grid-markdown-display">
-    </div>
+    <div id="markdown-display" class="file-grid-markdown-display"></div>
     <!-- div class="file-grid">
         <div class="loc-sidebar">
             <div class="one-digit">
