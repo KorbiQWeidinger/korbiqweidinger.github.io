@@ -60,40 +60,27 @@ body {
     margin-left: calc(100vw - 12rem);
 }
 
-.socials-button:hover {
-    cursor: pointer;
-    background-color: var(--intellij-purple);
-}
-
-.socials-button:hover .socials-logo {
-    color: var(--intellij-dark-gray2);
-}
-
-#about-me:hover .socials-button {
-    visibility: visible;
-}
-
 .socials-logo {
     color: var(--intellij-purple);
 }
 
 #codepen-logo {
-    padding: 7px 0 0 7px;
-    font-size: 33px;
+    margin: auto;
+    font-size: 38px;
 }
 
 #github-logo {
-    padding: 3px 7px 0 7px;
+    margin: auto;
     font-size: 39px;
 }
 
 #linkedin-logo {
-    padding: 3px 7px 0 7px;
+    margin: auto;
     font-size: 39px;
 }
 
 #mail-logo {
-    padding: 4px 7px 0 7px;
+    margin: auto;
     font-size: 34px;
 }
 
@@ -113,23 +100,10 @@ body {
     border-style: solid;
 }
 
-#say-hello-button:hover {
-    cursor: pointer;
-    background-color: var(--intellij-purple);
-}
-
-#say-hello-button:hover #say-hello-text {
-    color: var(--intellij-dark-gray2);
-}
-
 #say-hello-text {
     margin-top: 0.5rem;
     padding: 0 1.5rem;
     display: flex;
-}
-
-#about-me:hover #say-hello-button {
-    visibility: visible;
 }
 
 .img-container {
@@ -244,14 +218,6 @@ body {
     border-color: var(--intellij-purple);
     border-style: solid;
     margin-top: 3rem;
-}
-
-#send-button:hover {
-    background-color: var(--intellij-purple);
-}
-
-#send-button:hover > #send-button-text {
-    color: var(--intellij-dark-gray2);
 }
 
 #send-button-text {
@@ -414,5 +380,40 @@ body {
         height: 2rem;
         border-width: 3px;
     }
+}
 
+@media (hover: hover) {
+    .socials-button:hover {
+        cursor: pointer;
+        background-color: var(--intellij-purple);
+    }
+
+    .socials-button:hover .socials-logo {
+        color: var(--intellij-dark-gray2);
+    }
+
+    #about-me:hover .socials-button {
+        visibility: visible;
+    }
+
+    #say-hello-button:hover {
+        cursor: pointer;
+        background-color: var(--intellij-purple);
+    }
+
+    #say-hello-button:hover #say-hello-text {
+        color: var(--intellij-dark-gray2);
+    }
+
+    #about-me:hover #say-hello-button {
+        visibility: visible;
+    }
+
+    #send-button:hover {
+        background-color: var(--intellij-purple);
+    }
+
+    #send-button:hover > #send-button-text {
+        color: var(--intellij-dark-gray2);
+    }
 }

@@ -51,17 +51,16 @@ body {
     white-space: nowrap; /* keep text in one line */
     overflow: hidden; /* hide text behind the cursor */
     margin: 0 auto;
+    border-right: 3px solid var(--intellij-dark-gray2);
 }
 
 .line__1 {
-    border-right: 3px solid var(--intellij-dark-gray2);
     animation: animated-text__1 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 3;
 }
 
 .line__2 {
     padding-left: 56px;
-    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__2 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -71,7 +70,6 @@ body {
 
 .line__3 {
     padding-left: 56px;
-    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__3 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -81,7 +79,6 @@ body {
 
 .line__4 {
     padding-left: 56px;
-    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__4 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -90,8 +87,6 @@ body {
 }
 
 .line__5 {
-    border-right: 3px solid var(--intellij-dark-gray2);
-
     animation: animated-text__5 5ms steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) infinite;
     -webkit-animation-delay: 9s;
@@ -165,10 +160,23 @@ body {
 }
 
 @media (max-width: 460px) {
+
     #code-quote-div {
         font-size: 20px;
         width: 19.6rem;
-        height: 8.8rem;
+        height: 8.81rem;
+    }
+
+    .line__2 {
+        padding-left: 2.3rem;
+    }
+
+    .line__3 {
+        padding-left: 2.3rem;
+    }
+
+    .line__4 {
+        padding-left: 2.3rem;
     }
 
     @keyframes animated-text__1 {
