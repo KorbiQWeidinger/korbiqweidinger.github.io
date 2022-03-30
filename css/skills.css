@@ -14,7 +14,6 @@
     border-style: solid;
     border-width: 3px;
     border-radius: 30px;
-    box-shadow: 3px 3px rgba(42, 42, 42, 0.1);
     background-color: var(--intellij-dark-gray2);
 }
 
@@ -135,6 +134,10 @@
     .border-purple-right3 {
         border-right-style: hidden;
     }
+}
+
+.skill-svg-p {
+    fill: var(--intellij-purple);
 }
 
 @media (max-width: 800px) {

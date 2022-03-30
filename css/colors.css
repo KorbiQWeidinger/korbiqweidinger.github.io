@@ -1,14 +1,11 @@
 :root {
-    --intellij-gray1: #3A3D3F;
     --intellij-gray2: #4C5051;
-    --intellij-dark-gray1: #303030;
     --intellij-dark-gray2: #2A2A2A;
     --intellij-dark-gray3: #303133;
-    --intellij-blue1: #4884C1;
-    --intellij-blue2: #3E86A0;
     --intellij-purple: #9376AA;
     --intellij-dark-white: #bbbbbb;
     --intellij-orange: #CC7832;
+    --gradient1: linear-gradient(175deg, var(--intellij-dark-gray2) 20%, var(--intellij-purple) 100%);
 }
 
 .tc-intellij-purple {
@@ -21,10 +18,6 @@
 
 .tc-intellij-dark-gray2 {
     color: var(--intellij-dark-gray2);
-}
-
-.bc-intellij-gray1 {
-    background-color: var(--intellij-gray1);
 }
 
 .bc-intellij-purple {

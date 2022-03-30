@@ -6,8 +6,6 @@
     <link rel="icon"
           type="image/png"
           href="/favicon.ico">
-    <link rel="stylesheet" href="/css/grid.css">
-    <link rel="stylesheet" href="/css/icons.css">
     <link rel="stylesheet" href="/css/colors.css">
     <link rel="stylesheet" href="/css/aboutme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -130,10 +128,13 @@
         </div>
     </div>
 
-    <div id="skills-section"
-         style="padding-bottom: 10rem; background-color: var(--intellij-dark-gray2); background-image: linear-gradient(175deg, rgba(42,42,42,1) 20%, rgba(147,118,170,1) 100%);"></div>
+    <div style="margin: 20vh"></div>
 
-    <div id="say-hello-button" class="bc-intellij-dark-gray2" onclick="open_email_form()">
+    <div class="subsection-title" style="padding-bottom: 3rem">My Skills</div>
+    <div id="skills-section"
+         style="padding-bottom: 10rem; background-color: var(--intellij-dark-gray2); background-image: var(--gradient1)"></div>
+
+    <div id="say-hello-button" class="bc-intellij-dark-gray2" onclick="change_color_theme()">
         <div id="say-hello-text" class="tc-intellij-purple">
             Say Hello
         </div>
@@ -142,13 +143,12 @@
     <div style="margin: 20vh"></div>
 
     <div id="recent-work">
-        <div id="recent-work-title">My Recent Work</div>
+        <div id="recent-work-title" class="subsection-title">My Recent Work</div>
     </div>
 
     <div style="margin: 5vh"></div>
 </div>
 </body>
-<script type="text/javascript" src="/js/grid.js"></script>
 <script type="text/javascript" src="/js/aboutme.js"></script>
 <script>
     load_external_html_into('code-quote-wrapper', '/html/code_quote.html')

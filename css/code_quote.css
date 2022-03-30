@@ -33,8 +33,8 @@ body {
     border-right: var(--intellij-gray2);
     border-right-width: 1px;
     border-right-style: solid;
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #code-quote-div-quote {
@@ -54,14 +54,14 @@ body {
 }
 
 .line__1 {
-    border-right: 3px solid rgb(43, 43, 43);
+    border-right: 3px solid var(--intellij-dark-gray2);
     animation: animated-text__1 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 3;
 }
 
 .line__2 {
     padding-left: 56px;
-    border-right: 3px solid rgb(43, 43, 43);
+    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__2 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -71,7 +71,7 @@ body {
 
 .line__3 {
     padding-left: 56px;
-    border-right: 3px solid rgb(43, 43, 43);
+    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__3 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -81,7 +81,7 @@ body {
 
 .line__4 {
     padding-left: 56px;
-    border-right: 3px solid rgb(43, 43, 43);
+    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__4 1s steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) 2;
@@ -90,7 +90,7 @@ body {
 }
 
 .line__5 {
-    border-right: 3px solid rgb(43, 43, 43);
+    border-right: 3px solid var(--intellij-dark-gray2);
 
     animation: animated-text__5 5ms steps(15, end) 1s 1 normal both,
     animated-cursor 900ms steps(15, end) infinite;
@@ -100,7 +100,7 @@ body {
 
 @keyframes animated-cursor {
     from {
-        border-right-color: rgba(255, 255, 255, 0.8);
+        border-right-color: var(--intellij-dark-white);
     }
     to {
         border-right-color: transparent;
