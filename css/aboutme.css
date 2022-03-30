@@ -8,12 +8,12 @@
     font-size: 30px;
 }
 
-#codepen-button {
+.socials-button {
     visibility: hidden;
-    margin-left: 89%;
-    margin-top: 4%;
-    z-index: 5;
+    z-index: 16;
     position: fixed;
+    top:0;
+    left:0;
     width: 3rem;
     height: 3rem;
     display: flex;
@@ -22,34 +22,74 @@
     border-style: solid;
 }
 
-#codepen-button:hover {
+#codepen-button {
+    margin-top: 4rem;
+    margin-left: calc(100vw - 8rem);
+}
+
+#github-button {
+    margin-top: 4rem;
+    margin-left: calc(100vw - 12rem);
+}
+
+#linkedin-button {
+    margin-top: 8rem;
+    margin-left: calc(100vw - 8rem);
+}
+
+#mail-button {
+    margin-top: 8rem;
+    margin-left: calc(100vw - 12rem);
+}
+
+.socials-button:hover {
     cursor: pointer;
     background-color: var(--intellij-purple);
 }
 
-#about-me:hover #codepen-button {
+.socials-button:hover .socials-logo {
+    color: var(--intellij-dark-gray2);
+}
+
+#about-me:hover .socials-button {
     visibility: visible;
+}
+
+.socials-logo {
+    color: var(--intellij-purple);
 }
 
 #codepen-logo {
     padding: 7px 0 0 7px;
     font-size: 33px;
-    color: var(--intellij-purple);
 }
 
-#codepen-button:hover #codepen-logo {
-    color: var(--intellij-dark-gray2);
+#github-logo {
+    padding: 3px 7px 0 7px;
+    font-size: 39px;
+}
+
+#linkedin-logo {
+    padding: 3px 7px 0 7px;
+    font-size: 39px;
+}
+
+#mail-logo {
+    padding: 4px 7px 0 7px;
+    font-size: 34px;
 }
 
 #say-hello-button {
     visibility: hidden;
-    margin-left: 6%;
-    margin-top: 4%;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    top:0;
+    left:0;
     z-index: 5;
     position: fixed;
     width: auto;
     height: 3rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     display: flex;
     border-color: var(--intellij-purple);
     border-style: solid;
@@ -67,6 +107,7 @@
 #say-hello-text {
     margin-top: 0.5rem;
     padding: 0 1.5rem;
+    display: flex;
 }
 
 #about-me:hover #say-hello-button {
@@ -74,16 +115,15 @@
 }
 
 .img-container {
+    width: 20rem;
+    height: 16rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 9rem;
-    width: 25rem;
-    height: 15rem;
 }
 
 .round-image {
-    width: 25rem;
-    height: 17rem;
+    width: 20rem;
+    height: 16rem;
     overflow: hidden;
     object-fit: cover;
     border-radius: 14rem 14rem 0 0;
@@ -93,163 +133,127 @@
     border-width: 4px;
 }
 
-.purple-div {
+#my-image {
+    background-image: url("/img/me.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#me-div {
     width: 75%;
-    text-align: center;
-    background-color: #9376AA;
     font-size: 35px;
-    padding-top: 10px;
-    color: #2A2A2A;
-    padding-bottom: 10px;
-    margin-top: -7rem;
+    padding: 1rem;
+    margin-top: -.2rem;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
 }
 
-.aboutme-text {
-    text-align: center;
-    color: var(--intellij-dark-white);
+#about-me-text {
     font-size: 20px;
     padding: 2%;
 }
 
-#email-popup-form-wrapper {
+#email-popup {
     visibility: hidden;
-    z-index: 6;
+}
+
+#email-popup-background {
+    visibility: hidden;
+    z-index: 16;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(147, 118, 170, 0.63);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 118, 170, 0.47);
 }
 
 #email-popup-form {
-    visibility: hidden;
-    z-index: 7;
+    z-index: 17;
     position: fixed;
     margin-left: 20vw;
-    margin-top: 20vh;
+    margin-top: 10vh;
     width: 60vw;
-    height: 60vh;
-    background-color: var(--intellij-dark-gray2);
+    height: 80vh;
     border-radius: 2rem;
     border-color: var(--intellij-purple);
     border-style: solid;
+    font-size: 27px;
 }
 
+#email-popup-header {
+    padding: 2rem 0;
+    font-size: 30px;
+}
 
-.skills {
-    display: grid;
-    grid-template: auto auto auto / 33% 34% 33%;
-    grid-template-areas:
-            'skill-section11 skill-section12 skill-section13'
-            'skill-section21 skill-section22 skill-section23'
-            'skill-section31 skill-section32 skill-section33';
-    font-family: "JetBrains Mono", serif;
+#name-and-email {
+    display: flex;
+}
+
+#name-section {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    width: 100%;
+}
+
+#email-section {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    width: 100%;
+}
+
+#interest-section {
+    padding-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: auto;
+}
+
+#message-section {
+    padding-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    max-height: 24vh;
+    width: auto;
+}
+
+#message-input {
+    resize: vertical;
+    max-height: 24vh;
+    height: auto;
+}
+
+#send-button {
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: auto;
-    border: var(--intellij-purple);
+    width: 15rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border-color: var(--intellij-purple);
     border-style: solid;
-    border-width: 3px;
-    border-radius: 30px;
-    box-shadow: 3px 3px rgba(42, 42, 42, 0.1);
-    background-color: var(--intellij-dark-gray2);
+    margin-top: 3rem;
 }
 
-.skill-section11 {
-    grid-area: skill-section11;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section12 {
-    grid-area: skill-section12;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section13 {
-    grid-area: skill-section13;
-}
-
-.skill-section21 {
-    grid-area: skill-section21;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section22 {
-    grid-area: skill-section22;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section23 {
-    grid-area: skill-section23;
-}
-
-.skill-section31 {
-    grid-area: skill-section31;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section32 {
-    grid-area: skill-section32;
-    border-right: var(--intellij-purple);
-    border-right-style: solid;
-    border-right-width: 3px;
-}
-
-.skill-section33 {
-    grid-area: skill-section33;
-}
-
-.skill-title {
-    color: var(--intellij-purple);
-    text-align: center;
-    font-size: 35px;
-}
-
-.skill-icon {
-    background-size: 5rem 5rem;
-    width: 5rem;
-    height: 5rem;
-    margin: 1.5rem auto;
-}
-
-.skill-hr {
+#send-button:hover {
     background-color: var(--intellij-purple);
-    height: 1px;
-    border: none;
-    width: 70%;
 }
 
-.skill-message {
-    margin: 0.2rem auto;
-    font-size: 16px;
-    text-align: center;
-    padding: 0 1rem;
+#send-button:hover > #send-button-text {
+    color: var(--intellij-dark-gray2);
 }
 
-.skill-subtitle {
-    color: var(--intellij-purple);
-    text-align: center;
-    font-size: 20px;
-    padding-top: 2.5rem;
-    margin-bottom: 0.5rem;
+#send-button-text {
+    padding-top: 0.5rem;
 }
 
-.hover-pointer:hover {
-    cursor: pointer;
+.input1 {
+    margin-top: .5rem;
+    border: 2px solid var(--intellij-purple);
+    border-radius: 4px;
+    height: 2.3rem;
+    font-size: 25px;
+    width: 100%;
+    font-family: 'JetBrains Mono', serif;
 }
 
 #recent-work {
@@ -260,4 +264,103 @@
     text-align: center;
     color: var(--intellij-purple);
     font-size: 40px;
+}
+
+#email-close-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: -1.5rem;
+    margin-top: -1.5rem;
+    border: var(--intellij-purple);
+    border-style: solid;
+    border-width: 3px;
+}
+
+#email-close-icon {
+    background-size: 5rem 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+}
+
+@media (max-width: 1400px) {
+    #say-hello-button {
+        visibility: visible;
+        position: relative;
+        margin-top: -7rem;
+        width: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .socials-button {
+        visibility: visible;
+        position: relative;
+    }
+
+    #socials {
+        display: flex;
+        margin: 5rem auto;
+        width: 18rem;
+    }
+
+    #github-button {
+        margin: 0 1rem 0 1rem;
+    }
+
+    #codepen-button {
+        margin: 0;
+    }
+
+    #mail-button {
+        margin: 0
+    }
+
+    #linkedin-button {
+        margin: 0 1rem 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .img-container {
+        width: 18.5rem;
+        height: 14.9rem;
+    }
+
+    .round-image {
+        width: 18.5rem;
+        height: 14.9rem;
+    }
+
+    #me-div {
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+}
+
+@media (max-width: 475px) {
+    .img-container {
+        width: 16rem;
+        height: 13rem;
+    }
+
+    .round-image {
+        width: 16rem;
+        height: 13rem;
+    }
+
+    #about-me-title {
+        font-size: 35px;
+        padding: 1rem;
+    }
+
+    #about-me-subtitle {
+        font-size: 25px;
+        padding: .5rem 1rem 3rem 1rem;
+    }
 }

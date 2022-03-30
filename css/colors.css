@@ -19,8 +19,16 @@
     color: var(--intellij-dark-white);
 }
 
+.tc-intellij-dark-gray2 {
+    color: var(--intellij-dark-gray2);
+}
+
 .bc-intellij-gray1 {
     background-color: var(--intellij-gray1);
+}
+
+.bc-intellij-purple {
+    background-color: var(--intellij-purple);
 }
 
 .bc-intellij-dark-gray2 {
@@ -29,4 +37,8 @@
 
 .ta-center {
     text-align: center;
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
 }

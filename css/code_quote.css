@@ -163,3 +163,59 @@ body {
 .jetbrains-purple {
     color: var(--intellij-purple);
 }
+
+@media (max-width: 460px) {
+    #code-quote-div {
+        font-size: 20px;
+        width: 19.6rem;
+        height: 8.8rem;
+    }
+
+    @keyframes animated-text__1 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 14.25rem;
+        }
+    }
+
+    @keyframes animated-text__2 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 9rem;
+        }
+    }
+
+    @keyframes animated-text__3 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 9.7rem;
+        }
+
+    }
+
+    @keyframes animated-text__4 {
+        from {
+            width: 0;
+        }
+        to {
+            width: 10.5rem;
+        }
+
+    }
+
+    @keyframes animated-text__5 {
+        from {
+            width: 0;
+        }
+        to {
+            width: .8rem;
+        }
+
+    }
+}

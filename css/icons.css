@@ -1,17 +1,11 @@
 /*noinspection ALL*/
 .close-icon {
     background: url("/korbiqweidinger.github.io/img/intellij/close.svg") no-repeat;
-    background-size: 28px 28px;
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-    margin-left: 7px;
 }
 
 /*noinspection ALL*/
 .close-icon:hover {
     background: url("/korbiqweidinger.github.io/img/intellij/closeHovered.svg") no-repeat;
-    background-size: 28px 28px;
 }
 
 /*noinspection ALL*/
