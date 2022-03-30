@@ -115,15 +115,15 @@
 }
 
 .img-container {
-    width: 20rem;
-    height: 16rem;
+    width: 25rem;
+    height: 20rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 .round-image {
-    width: 20rem;
-    height: 16rem;
+    width: 25rem;
+    height: 20rem;
     overflow: hidden;
     object-fit: cover;
     border-radius: 14rem 14rem 0 0;
@@ -131,12 +131,6 @@
     border: var(--intellij-purple);
     border-style: solid;
     border-width: 4px;
-}
-
-#my-image {
-    background-image: url("/img/me.png");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 #me-div {

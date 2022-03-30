@@ -1,16 +1,16 @@
 /*noinspection ALL*/
 .close-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/close.svg") no-repeat;
+    background: url("/img/intellij/close.svg") no-repeat;
 }
 
 /*noinspection ALL*/
 .close-icon:hover {
-    background: url("/korbiqweidinger.github.io/img/intellij/closeHovered.svg") no-repeat;
+    background: url("/img/intellij/closeHovered.svg") no-repeat;
 }
 
 /*noinspection ALL*/
 .markdown-file-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/MarkdownPlugin.svg") no-repeat;
+    background: url("/img/intellij/MarkdownPlugin.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -21,7 +21,7 @@
 
 /*noinspection ALL*/
 .html-file-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/html.svg") no-repeat;
+    background: url("/img/intellij/html.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -32,7 +32,7 @@
 
 /*noinspection ALL*/
 .java {
-    background: url("/korbiqweidinger.github.io/img/intellij/java.svg") no-repeat;
+    background: url("/img/intellij/java.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -43,7 +43,7 @@
 
 /*noinspection ALL*/
 .github-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/github_dark.svg") no-repeat;
+    background: url("/img/intellij/github_dark.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -54,7 +54,7 @@
 
 /*noinspection ALL*/
 .project-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/projectTab.svg") no-repeat;
+    background: url("/img/intellij/projectTab.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -65,7 +65,7 @@
 
 /*noinspection ALL*/
 .arrow-down-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/arrowDown_dark.svg") no-repeat;
+    background: url("/img/intellij/arrowDown_dark.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -76,7 +76,7 @@
 
 /*noinspection ALL*/
 .arrow-expand-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/arrowExpand_dark.svg") no-repeat;
+    background: url("/img/intellij/arrowExpand_dark.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -87,7 +87,7 @@
 
 /*noinspection ALL*/
 .menu-arrow-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/menuArrow_dark.svg") 0 0 no-repeat;
+    background: url("/img/intellij/menuArrow_dark.svg") 0 0 no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -102,7 +102,7 @@
 
 /*noinspection ALL*/
 .minimize-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/minimize_dark.svg") no-repeat;
+    background: url("/img/intellij/minimize_dark.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -112,7 +112,7 @@
 
 /*noinspection ALL*/
 .module-directory-icon-dark {
-    background: url("/korbiqweidinger.github.io/img/intellij/moduleDirectory_dark.svg") no-repeat;
+    background: url("/img/intellij/moduleDirectory_dark.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -123,7 +123,7 @@
 
 /*noinspection ALL*/
 .src-folder-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/src_folder.svg") no-repeat;
+    background: url("/img/intellij/src_folder.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -134,7 +134,7 @@
 
 /*noinspection ALL*/
 .folder-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/folder.svg") no-repeat;
+    background: url("/img/intellij/folder.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -145,7 +145,7 @@
 
 /*noinspection ALL*/
 .linkedin-icon {
-    background: url("/korbiqweidinger.github.io/img/linkedin-logo.png") no-repeat;
+    background: url("/img/linkedin-logo.png") no-repeat;
     background-size: 32px 32px;
     width: 35px;
     height: 35px;
@@ -155,7 +155,7 @@
 
 /*noinspection ALL*/
 .class-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/class.svg") no-repeat;
+    background: url("/img/intellij/class.svg") no-repeat;
     background-size: 28px 28px;
     width: 35px;
     height: 35px;
@@ -165,7 +165,7 @@
 
 /*noinspection ALL*/
 .layout-editor-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/layoutEditorOnly_dark.svg") no-repeat;
+    background: url("/img/intellij/layoutEditorOnly_dark.svg") no-repeat;
     background-size: 35px 35px;
     width: 3rem;
     height: 3rem;
@@ -174,7 +174,7 @@
 
 /*noinspection ALL*/
 .image-icon {
-    background: url("/korbiqweidinger.github.io/img/intellij/ThumbnailToolWindow_dark.svg") no-repeat;
+    background: url("/img/intellij/ThumbnailToolWindow_dark.svg") no-repeat;
     background-size: 35px 35px;
     width: 3rem;
     height: 3rem;
@@ -183,17 +183,22 @@
 
 /*noinspection ALL*/
 .designer-icon {
-    background: url("/korbiqweidinger.github.io/img/designer.svg") no-repeat;
+    background: url("/img/designer.svg") no-repeat;
 }
 
 /*noinspection ALL*/
 .developer-icon {
-    background: url("/korbiqweidinger.github.io/img/developer.svg") no-repeat;
+    background: url("/img/developer.svg") no-repeat;
 }
 
 /*noinspection ALL*/
 .tutor-icon {
-    background: url("/korbiqweidinger.github.io/img/tutor.svg") no-repeat;
+    background: url("/img/tutor.svg") no-repeat;
+}
+
+#my-image {
+    background: url("/img/me.png") no-repeat;
+    background-size: contain;
 }
 
 
