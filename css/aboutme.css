@@ -355,6 +355,34 @@ body {
     }
 }
 
+#color-palette {
+    display: flex;
+    width: 9rem;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+#color-theme-purple {
+    background: linear-gradient(90deg, #2A2A2AFF 40%, #9376AAFF 100%);
+    border-color: #9376AAFF;
+}
+
+#color-theme-blue {
+    background: linear-gradient(90deg, #cbcbcb 40%, #4884C1 100%);
+    border-color: #4884C1;
+}
+
+.color-theme {
+    width: 3rem;
+    height: 3rem;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
 @media (max-width: 475px) {
     .img-container {
         width: 16rem;
@@ -375,4 +403,16 @@ body {
         font-size: 25px;
         padding: .5rem 1rem 3rem 1rem;
     }
+
+    #color-palette {
+        width: 7rem;
+        margin-top: -1rem;
+    }
+
+    .color-theme {
+        width: 2rem;
+        height: 2rem;
+        border-width: 3px;
+    }
+
 }
