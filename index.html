@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KW Portfolio</title>
+    <title>Portfolio</title>
     <link rel="icon"
           type="image/png"
-          href="/favicon.ico">
+          href="/img/kw.ico">
     <link rel="stylesheet" href="/css/colors.css">
     <link rel="stylesheet" href="/css/aboutme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -148,9 +148,13 @@
 
     <div id="recent-work">
         <div id="recent-work-title" class="subsection-title">My Recent Work</div>
+
+        <div style="margin: 10vh"></div>
+        <div id="laptop-wrapper"></div>
+        <div id="recent-work-wrapper"></div>
     </div>
 
-    <div style="margin: 5vh"></div>
+    <div style="margin: 15vh"></div>
 
     <div style="font-size: 20px" class="ta-center">More coming soon...</div>
 
@@ -161,6 +165,20 @@
 <script>
     load_external_html_into('code-quote-wrapper', '/html/code_quote.html')
     load_external_html_into('skills-section', '/html/skills.html')
+
+    window.onresize = function() {
+        if(screen.width <= 1440) {
+            load_external_html_into('laptop-wrapper', '/html/iphone.html')
+        } else {
+            load_external_html_into('laptop-wrapper', '/html/laptop.html')
+        }
+    };
+
+    if(screen.width <= 1440) {
+        load_external_html_into('laptop-wrapper', '/html/iphone.html')
+    } else {
+        load_external_html_into('laptop-wrapper', '/html/laptop.html')
+    }
 </script>
 </html>
 
