@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <title>Korbinian Weidinger</title>
     <link rel="icon"
           type="image/png"
           href="/img/kw.ico">
@@ -166,17 +166,28 @@
     load_external_html_into('code-quote-wrapper', '/html/code_quote.html')
     load_external_html_into('skills-section', '/html/skills.html')
 
+    let media_type = ''
+
     window.onresize = function() {
         if(screen.width <= 1440) {
-            load_external_html_into('laptop-wrapper', '/html/iphone.html')
+            if(media_type !== 'phone') {
+                load_external_html_into('laptop-wrapper', '/html/iphone.html')
+                media_type = 'phone'
+            }
         } else {
-            load_external_html_into('laptop-wrapper', '/html/laptop.html')
+            if(media_type !== 'laptop') {
+                load_external_html_into('laptop-wrapper', '/html/laptop.html')
+                media_type = 'laptop'
+            }
+
         }
     };
 
     if(screen.width <= 1440) {
+        media_type = 'phone'
         load_external_html_into('laptop-wrapper', '/html/iphone.html')
     } else {
+        media_type = 'laptop'
         load_external_html_into('laptop-wrapper', '/html/laptop.html')
     }
 </script>
