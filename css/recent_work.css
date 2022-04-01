@@ -2,10 +2,10 @@
 
 @font-face {
     font-family: "ad mono";
-    src: url("/korbiqweidinger.github.io/font/admono.eot"),
-    url("/korbiqweidinger.github.io/font/admono.woff") format("woff"),
-    url("/korbiqweidinger.github.io/font/admono.otf") format("opentype"),
-    url("/korbiqweidinger.github.io/font/admono.svg#filename") format("svg");
+    src: url("/font/admono.eot"),
+    url("/font/admono.woff") format("woff"),
+    url("/font/admono.otf") format("opentype"),
+    url("/font/admono.svg#filename") format("svg");
 }
 
 .recent-work-grid {

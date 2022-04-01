@@ -223,9 +223,15 @@ body {
 }
 
 #skills-section {
-    padding-bottom: 45rem;
+    padding-bottom: 35rem;
     background-color: var(--intellij-dark-gray2);
     background-image: var(--gradient1)
+}
+
+#recent-work-title {
+    color: var(--intellij-dark-gray2);
+    margin-top: -32rem;
+    padding: 5rem
 }
 
 .subsection-title {
