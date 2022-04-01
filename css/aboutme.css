@@ -260,6 +260,21 @@ body {
     margin-top: -0.5rem;
 }
 
+#contact-footer {
+    font-size: 23px;
+    text-align: center;
+    background-color: var(--intellij-purple);
+    color: var(--intellij-dark-gray2);
+    padding: 2rem;
+}
+
+#footer {
+    font-size: 18px;
+    text-align: center;
+    color: var(--intellij-purple);
+    padding: 2rem;
+}
+
 @media (max-width: 1400px) {
 
     #socials {
@@ -294,25 +309,6 @@ body {
     }
 }
 
-@media (max-width: 600px) {
-    .img-container {
-        width: 18.5rem;
-        height: 14.9rem;
-    }
-
-    .round-image {
-        width: 18.5rem;
-        height: 14.9rem;
-    }
-
-    #me-div {
-        font-size: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-    }
-}
-
 #color-palette {
     display: flex;
     width: 9rem;
@@ -340,6 +336,26 @@ body {
     border-radius: 50%;
     margin: 0.5rem;
 }
+
+@media (max-width: 600px) {
+    .img-container {
+        width: 18.5rem;
+        height: 14.9rem;
+    }
+
+    .round-image {
+        width: 18.5rem;
+        height: 14.9rem;
+    }
+
+    #me-div {
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+}
+
 
 @media (max-width: 475px) {
     .img-container {
@@ -372,6 +388,10 @@ body {
         height: 2rem;
         border-width: 3px;
     }
+
+    #contact-footer {
+        font-size: 18px;
+    }
 }
 
 @media (hover: hover) {
@@ -395,20 +415,5 @@ body {
     #send-button:hover > #send-button-text {
         color: var(--intellij-dark-gray2);
     }
-}
-
-#contact-footer {
-    font-size: 23px;
-    text-align: center;
-    background-color: var(--intellij-purple);
-    color: var(--intellij-dark-gray2);
-    padding: 2rem;
-}
-
-#footer {
-    font-size: 18px;
-    text-align: center;
-    color: var(--intellij-purple);
-    padding: 2rem;
 }
 
