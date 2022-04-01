@@ -30,8 +30,8 @@ body {
     visibility: hidden;
     z-index: 16;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 3rem;
     height: 3rem;
     display: flex;
@@ -51,13 +51,18 @@ body {
 }
 
 #linkedin-button {
-    margin-top: 8rem;
-    margin-left: calc(100vw - 8rem);
+    margin-top: 4rem;
+    margin-left: 12rem;
 }
 
 #mail-button {
-    margin-top: 8rem;
-    margin-left: calc(100vw - 12rem);
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+#say-hello-button {
+    margin-top: 4rem;
+    margin-left: 8rem;
 }
 
 .socials-logo {
@@ -84,26 +89,9 @@ body {
     font-size: 34px;
 }
 
-#say-hello-button {
-    visibility: hidden;
-    margin-left: 4rem;
-    margin-top: 4rem;
-    top:0;
-    left:0;
-    z-index: 5;
-    position: fixed;
-    width: auto;
-    height: 3rem;
-    border-radius: 1rem;
-    display: flex;
-    border-color: var(--intellij-purple);
-    border-style: solid;
-}
-
-#say-hello-text {
-    margin-top: 0.5rem;
-    padding: 0 1.5rem;
-    display: flex;
+#whatsapp-logo {
+    margin: auto;
+    font-size: 38px;
 }
 
 .img-container {
@@ -234,8 +222,10 @@ body {
     font-family: 'JetBrains Mono', serif;
 }
 
-#recent-work {
-    margin-top: 10%;
+#skills-section {
+    padding-bottom: 45rem;
+    background-color: var(--intellij-dark-gray2);
+    background-image: var(--gradient1)
 }
 
 .subsection-title {
@@ -265,13 +255,11 @@ body {
 }
 
 @media (max-width: 1400px) {
-    #say-hello-button {
-        visibility: visible;
-        position: relative;
-        margin-top: -7rem;
-        width: 10rem;
-        margin-left: auto;
-        margin-right: auto;
+
+    #socials {
+        display: flex;
+        margin: 5rem auto;
+        width: calc(5 * 4.4rem);
     }
 
     .socials-button {
@@ -279,26 +267,24 @@ body {
         position: relative;
     }
 
-    #socials {
-        display: flex;
-        margin: 5rem auto;
-        width: 16.5rem;
-    }
-
-    #github-button {
-        margin: 0 1rem 0 1rem;
-    }
-
-    #codepen-button {
-        margin: 0;
-    }
-
     #mail-button {
-        margin: 0
+        margin: 0.5rem;
+    }
+
+    #say-hello-button {
+        margin: 0.5rem;
     }
 
     #linkedin-button {
-        margin: 0 1rem 0 0;
+        margin: 0.5rem;
+    }
+
+    #codepen-button {
+        margin: 0.5rem;
+    }
+
+    #github-button {
+        margin: 0.5rem;
     }
 }
 
@@ -396,19 +382,6 @@ body {
         visibility: visible;
     }
 
-    #say-hello-button:hover {
-        cursor: pointer;
-        background-color: var(--intellij-purple);
-    }
-
-    #say-hello-button:hover #say-hello-text {
-        color: var(--intellij-dark-gray2);
-    }
-
-    #about-me:hover #say-hello-button {
-        visibility: visible;
-    }
-
     #send-button:hover {
         background-color: var(--intellij-purple);
     }
@@ -417,3 +390,19 @@ body {
         color: var(--intellij-dark-gray2);
     }
 }
+
+#contact-footer {
+    font-size: 23px;
+    text-align: center;
+    background-color: var(--intellij-purple);
+    color: var(--intellij-dark-gray2);
+    padding: 2rem;
+}
+
+#footer {
+    font-size: 18px;
+    text-align: center;
+    color: var(--intellij-purple);
+    padding: 2rem;
+}
+

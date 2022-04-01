@@ -20,47 +20,6 @@
 <body>
 <div id="about-me">
 
-    <div id="email-popup-background" onclick="close_email_form()"></div>
-
-    <div id="email-popup">
-        <div id="email-popup-form" class="bc-intellij-dark-gray2">
-
-            <div id="email-close-button" class="bc-intellij-dark-gray2 hover-pointer" onclick="close_email_form()">
-                <div id="email-close-icon" class="close-icon"></div>
-            </div>
-
-            <div id="email-popup-header" class="ta-center tc-intellij-purple">
-                Want to hire or collaborate with me?
-            </div>
-            <div id="name-and-email">
-                <div id="name-section">
-                    <div id="name-text" class="tc-intellij-purple">Name</div>
-                    <label for="name-input"></label>
-                    <input id="name-input" class="bc-intellij-dark-gray2 tc-intellij-white input1">
-                </div>
-                <div id="email-section">
-                    <div id="email-text" class="tc-intellij-purple">Email</div>
-                    <label for="email-input"></label>
-                    <input id="email-input" class="bc-intellij-dark-gray2 tc-intellij-white input1">
-                </div>
-            </div>
-            <div id="interest-section">
-                <div id="interest-text" class="tc-intellij-purple">Your interest</div>
-                <label for="interest-input"></label>
-                <input id="interest-input" class="bc-intellij-dark-gray2 tc-intellij-white input1">
-            </div>
-            <div id="message-section">
-                <div id="message-text" class="tc-intellij-purple">Message</div>
-                <label for="message-input"></label>
-                <textarea id="message-input" rows="6"
-                          class="bc-intellij-dark-gray2 tc-intellij-white input1"></textarea>
-            </div>
-            <div id="send-button" class="hover-pointer">
-                <div id="send-button-text" class="tc-intellij-purple ta-center">Send</div>
-            </div>
-        </div>
-    </div>
-
     <div id="introduction">
 
         <div id="about-me-title" class="tc-intellij-purple ta-center">Software Developer, Designer & Tutor</div>
@@ -106,28 +65,34 @@
     </div>
 
     <div id="socials">
-        <div id="codepen-button" class="bc-intellij-dark-gray2 socials-button">
-            <div id="codepen-logo" class="tc-intellij-purple socials-logo"
-                 onclick="window.open('https://codepen.io/korbiqweidinger/', '_blank');">
-                <i class="fa fa-codepen" aria-hidden="true"></i>
+        <div id="mail-button" class="bc-intellij-dark-gray2 socials-button"
+             onclick="location.href='mailto:korbi.weidinger2@gmail.com';">
+            <div id="mail-logo" class="tc-intellij-purple socials-logo">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
             </div>
         </div>
-        <div id="github-button" class="bc-intellij-dark-gray2 socials-button">
-            <div id="github-logo" class="tc-intellij-purple socials-logo"
-                 onclick="window.open('https://codepen.io/korbiqweidinger/pen/WNXVgdw', '_blank');">
-                <i class="fa fa-github" aria-hidden="true"></i>
+        <div id="say-hello-button" class="bc-intellij-dark-gray2 socials-button"
+             onclick="location.href='https://api.whatsapp.com/send?phone=+491728861529';">
+            <div id="whatsapp-logo" class="tc-intellij-purple socials-logo">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </div>
         </div>
-        <div id="linkedin-button" class="bc-intellij-dark-gray2 socials-button">
-            <div id="linkedin-logo" class="tc-intellij-purple socials-logo"
-                 onclick="window.open('https://www.linkedin.com/in/korbinian-weidinger-524b63229/?trk=public_profile_browsemap', '_blank');">
+        <div id="linkedin-button" class="bc-intellij-dark-gray2 socials-button"
+             onclick="window.open('https://www.linkedin.com/in/korbinian-weidinger-524b63229/?trk=public_profile_browsemap', '_blank');">
+            <div id="linkedin-logo" class="tc-intellij-purple socials-logo">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
             </div>
         </div>
-        <div id="mail-button" class="bc-intellij-dark-gray2 socials-button">
-            <div id="mail-logo" class="tc-intellij-purple socials-logo"
-                 onclick="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+        <div id="github-button" class="bc-intellij-dark-gray2 socials-button"
+             onclick="window.open('https://codepen.io/korbiqweidinger/pen/WNXVgdw', '_blank');">
+            <div id="github-logo" class="tc-intellij-purple socials-logo">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div id="codepen-button" class="bc-intellij-dark-gray2 socials-button"
+             onclick="window.open('https://codepen.io/korbiqweidinger/', '_blank');">
+            <div id="codepen-logo" class="tc-intellij-purple socials-logo">
+                <i class="fa fa-codepen" aria-hidden="true"></i>
             </div>
         </div>
     </div>
@@ -135,62 +100,35 @@
     <div style="margin: 20vh"></div>
 
     <div class="subsection-title" style="padding-bottom: 3rem">My Skills</div>
-    <div id="skills-section"
-         style="padding-bottom: 10rem; background-color: var(--intellij-dark-gray2); background-image: var(--gradient1)"></div>
 
-    <div id="say-hello-button" class="bc-intellij-dark-gray2" onclick="">
-        <div id="say-hello-text" class="tc-intellij-purple">
-            Say Hello
-        </div>
-    </div>
+    <div id="skills-section"></div>
 
-    <div style="margin: 20vh"></div>
+    <div id="recent-work-title" class="subsection-title" style="color: var(--intellij-dark-gray2); margin-top: -32rem; padding: 5rem">My Recent Work</div>
 
-    <div id="recent-work">
-        <div id="recent-work-title" class="subsection-title">My Recent Work</div>
+    <div id="laptop-wrapper"></div>
 
-        <div style="margin: 10vh"></div>
-        <div id="laptop-wrapper"></div>
-        <div id="recent-work-wrapper"></div>
-    </div>
-
-    <div style="margin: 15vh"></div>
+    <div style="margin: 10vh"></div>
 
     <div style="font-size: 20px" class="ta-center">More coming soon...</div>
 
     <div style="margin: 5vh"></div>
+
+    <div id="contact-footer">
+        <div style="padding-bottom: 0.5rem"><b>Contact me:</b></div>
+        <div class="hover-pointer" style="padding: 0.5rem" onclick="location.href='mailto:korbi.weidinger2@gmail.com';">
+            <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 0.2rem"></i>
+            <span>korbi.weidinger2@gmail.com</span>
+        </div>
+        <div class="hover-pointer" onclick="location.href='https://api.whatsapp.com/send?phone=+491728861529';">
+            <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 0.2rem"></i>
+            <span>+49 172 8861529</span>
+        </div>
+    </div>
+    <div id="footer">Handcrafted by me © Korbinian Weidinger. All rights reserved.</div>
 </div>
 </body>
 <script type="text/javascript" src="/js/aboutme.js"></script>
-<script>
-    load_external_html_into('code-quote-wrapper', '/html/code_quote.html')
-    load_external_html_into('skills-section', '/html/skills.html')
-
-    let media_type = ''
-
-    window.onresize = function() {
-        if(screen.width <= 1440) {
-            if(media_type !== 'phone') {
-                load_external_html_into('laptop-wrapper', '/html/iphone.html')
-                media_type = 'phone'
-            }
-        } else {
-            if(media_type !== 'laptop') {
-                load_external_html_into('laptop-wrapper', '/html/laptop.html')
-                media_type = 'laptop'
-            }
-
-        }
-    };
-
-    if(screen.width <= 1440) {
-        media_type = 'phone'
-        load_external_html_into('laptop-wrapper', '/html/iphone.html')
-    } else {
-        media_type = 'laptop'
-        load_external_html_into('laptop-wrapper', '/html/laptop.html')
-    }
-</script>
+<script type="text/javascript" src="/js/index.js"></script>
 </html>
 
 

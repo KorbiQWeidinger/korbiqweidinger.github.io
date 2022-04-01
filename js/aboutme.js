@@ -1,16 +1,5 @@
 function load_external_html_into(id, external_html_filename) {
-    console.log(external_html_filename)
     $('#' + id).load(external_html_filename)
-}
-
-function open_email_form() {
-    $('#email-popup').css('visibility','visible')
-    $('#email-popup-background').css('visibility','visible')
-}
-
-function close_email_form() {
-    $('#email-popup').css('visibility','hidden')
-    $('#email-popup-background').css('visibility','hidden')
 }
 
 function change_color_theme(name) {
