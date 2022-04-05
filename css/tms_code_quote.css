@@ -13,7 +13,7 @@ body {
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 27rem;
+    width: 29rem;
     height: 13rem;
     border: var(--c2);
     border-style: solid;
@@ -108,7 +108,7 @@ body {
         width: 0;
     }
     to {
-        width: 21.5rem;
+        width: 24rem;
     }
 }
 
@@ -117,7 +117,7 @@ body {
         width: 0;
     }
     to {
-        width: 13.5rem;
+        width: 19rem;
     }
 }
 
@@ -126,7 +126,7 @@ body {
         width: 0;
     }
     to {
-        width: 14.6rem;
+        width: 20rem;
     }
 
 }
@@ -136,7 +136,7 @@ body {
         width: 0;
     }
     to {
-        width: 15.65rem;
+        width: 18rem;
     }
 
 }
@@ -149,14 +149,6 @@ body {
         width: 1.3rem;
     }
 
-}
-
-.intellij-orange {
-    color: var(--intellij-orange);
-}
-
-.jetbrains-purple {
-    color: var(--c2);
 }
 
 @media (max-width: 460px) {

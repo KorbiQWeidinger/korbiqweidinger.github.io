@@ -10,11 +10,11 @@
     margin-right: auto;
     width: 70%;
     height: auto;
-    border: var(--intellij-purple);
+    border: var(--c2);
     border-style: solid;
     border-width: 3px;
     border-radius: 30px;
-    background-color: var(--intellij-dark-gray2);
+    background-color: var(--c1);
 }
 
 .section11 {
@@ -57,13 +57,13 @@
 }
 
 .border-purple-right3 {
-    border-right: var(--intellij-purple);
+    border-right: var(--c2);
     border-right-style: solid;
     border-right-width: 3px;
 }
 
 .skill-title {
-    color: var(--intellij-purple);
+    color: var(--c2);
     text-align: center;
     font-size: 35px;
 }
@@ -76,7 +76,7 @@
 }
 
 .skill-hr {
-    background-color: var(--intellij-purple);
+    background-color: var(--c2);
     height: 1px;
     border: none;
     width: 70%;
@@ -90,7 +90,7 @@
 }
 
 .skill-subtitle {
-    color: var(--intellij-purple);
+    color: var(--c2);
     text-align: center;
     font-size: 20px;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
@@ -114,13 +114,13 @@
     }
 
     .section31 {
-        border-bottom: var(--intellij-purple);
+        border-bottom: var(--c2);
         border-bottom-style: solid;
         border-bottom-width: 3px;
     }
 
     .section32 {
-        border-bottom: var(--intellij-purple);
+        border-bottom: var(--c2);
         border-bottom-style: solid;
         border-bottom-width: 3px;
     }
@@ -137,7 +137,7 @@
 }
 
 .skill-svg-p {
-    fill: var(--intellij-purple);
+    fill: var(--c2);
 }
 
 @media (max-width: 800px) {

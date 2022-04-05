@@ -94,7 +94,7 @@
 }
 
 .screen {
-    background-color: var(--intellij-dark-gray2);
+    background-color: var(--c1);
     width: 287px;
     height: 631px;
     margin-left: 50%;

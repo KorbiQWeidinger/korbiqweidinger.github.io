@@ -1,31 +1,35 @@
 :root {
+    --c1: #2A2A2A;
+    --c2: #9376AA;
+    --c3: #bbbbbb;
     --intellij-gray2: #4C5051;
-    --intellij-dark-gray2: #2A2A2A;
-    --intellij-dark-gray3: #303133;
-    --intellij-purple: #9376AA;
-    --intellij-dark-white: #bbbbbb;
+    --intellij-gray3: #919191;
     --intellij-orange: #CC7832;
-    --gradient1: linear-gradient(175deg, var(--intellij-dark-gray2) 20%, var(--intellij-purple) 100%);
+    --gradient1: linear-gradient(175deg, var(--c1) 20%, var(--c2) 100%);
 }
 
-.tc-intellij-purple {
-    color: var(--intellij-purple);
+.fc1 {
+    color: var(--c1);
 }
 
-.tc-intellij-white {
-    color: var(--intellij-dark-white);
+.fc2 {
+    color: var(--c2);
 }
 
-.tc-intellij-dark-gray2 {
-    color: var(--intellij-dark-gray2);
+.fc3 {
+    color: var(--c3);
 }
 
-.bc-intellij-purple {
-    background-color: var(--intellij-purple);
+.bgc1 {
+    background-color: var(--c1);
 }
 
-.bc-intellij-dark-gray2 {
-    background-color: var(--intellij-dark-gray2);
+.bgc2 {
+    background-color: var(--c2);
+}
+
+.intellij-orange {
+    color: var(--intellij-orange);
 }
 
 .ta-center {
