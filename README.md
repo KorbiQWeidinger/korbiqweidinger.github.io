@@ -1,33 +1,50 @@
-<p style="text-align: center; color: #9376AA; font-size: 30px">Full-Stack Developer, Designer & Consultant</p>
+# React + TypeScript + Vite
 
-<p style="text-align: center; margin-top: -20px; font-size: 20px">I write beautifully simple code that humans can understand!<p style="text-align: center;">
-<br>
-<br>
-<br>
-<div style="display: block; margin-left: auto; margin-right: auto; border-radius: 50%; width: 300px; height: 300px; overflow: hidden;">
-    <img src="/home/korbi/Projects/korbiqweidinger.github.io/img/me.jpg" style="">
-</div>
-<hr style="margin-top: -101px; height: 2px; background-color: #9376AA">
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-<div style="text-align: center; background-color: #9376AA;">
-<p style="text-align: center; margin-top: -20px; font-size: 25px; padding-top: 10px; color: #2A2A2A; padding-bottom: 10px"><b>Hi, I am Korbi. Nice to meet you!</b></p>
-</div>
+## Expanding the ESLint configuration
 
-<div style="text-align: center;">
-Since the beginning of my carrier as a software developer in 2017 the concepts of <b>Clean Code</b> and <b>TDD</b> were preached to me.<br>
-Ever since I worked hard to improve my skills and implement these concepts into my daily development tasks. <br>
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-Since 2018 I am working as a software developer next to acquiring a degree in Computer Science. <br>
-I am currently doing my M.Sc. in Informatics @ TUM.
+- Configure the top-level `parserOptions` property like this:
 
-I've done remote work since 2019, as consultant, frontend-developer and collaborated with talented people to create digital products for both business and consumer use. <br>
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-I'm confident, naturally curious, and perpetually working on improving my chops one coding problem at a time.
-</div>
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-
-
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
