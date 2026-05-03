@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { cn } from '@/utils/cn';
 
 interface MarkdownRawProps {
@@ -6,26 +5,25 @@ interface MarkdownRawProps {
   className?: string;
 }
 
-const URL_PATTERN = /(https?:\/\/[^\s)]+)/g;
+const URL_SPLIT_PATTERN = /(https?:\/\/[^\s)]+)/g;
+const URL_TEST_PATTERN = /^https?:\/\/[^\s)]+$/;
 
 function linkify(text: string) {
-  const parts = text.split(URL_PATTERN);
-  return parts.map((part, index) => {
-    if (URL_PATTERN.test(part)) {
-      URL_PATTERN.lastIndex = 0;
-      return (
-        <a
-          key={index}
-          href={part}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-primary underline underline-offset-4 hover:opacity-80'
-        >
-          {part}
-        </a>
-      );
+  return text.split(URL_SPLIT_PATTERN).map((part, index) => {
+    if (!URL_TEST_PATTERN.test(part)) {
+      return part;
     }
-    return <Fragment key={index}>{part}</Fragment>;
+    return (
+      <a
+        key={index}
+        href={part}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='text-primary underline underline-offset-4 hover:opacity-80'
+      >
+        {part}
+      </a>
+    );
   });
 }
 

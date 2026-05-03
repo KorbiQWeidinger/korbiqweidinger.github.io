@@ -6,9 +6,6 @@ import { cn } from '@/utils/cn';
 
 export type ContentViewMode = 'preview' | 'raw';
 
-const toolbarIconButtonClass =
-  'h-7 w-7 border border-border bg-transparent px-0 text-muted-foreground hover:bg-accent hover:text-foreground dark:hover:bg-accent';
-
 interface ContentToolbarProps {
   filename: string;
   isSidebarOpen: boolean;
@@ -31,19 +28,16 @@ export function ContentToolbar({
       asChild
       variant='toolbar'
       padding='sm'
-      className='relative grid min-h-11 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:min-h-0 sm:px-4'
+      className='grid min-h-11 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:min-h-0 sm:grid-cols-[1fr_minmax(0,auto)_1fr] sm:px-4'
     >
       <header>
         <Button
-          variant='ghost'
-          size='sm'
+          variant='toolbarIcon'
+          size='iconSm'
           onClick={onToggleSidebar}
+          aria-pressed={isSidebarOpen}
           aria-label={isSidebarOpen ? 'Collapse file explorer' : 'Expand file explorer'}
-          className={cn(
-            'z-10',
-            toolbarIconButtonClass,
-            isSidebarOpen && 'bg-accent text-accent-foreground'
-          )}
+          className={cn('justify-self-start', isSidebarOpen && 'bg-accent text-accent-foreground')}
         >
           {isSidebarOpen ? (
             <PanelLeftClose className='size-3.5' />
@@ -52,19 +46,17 @@ export function ContentToolbar({
           )}
         </Button>
 
-        <div className='pointer-events-none absolute left-1/2 top-1/2 z-0 flex max-w-[calc(100%-13rem)] -translate-x-1/2 -translate-y-1/2 justify-center sm:max-w-[calc(100%-22rem)]'>
-          <Button
-            variant='ghost'
-            size='sm'
-            onClick={onOpenSidebar}
-            aria-label='Open file explorer'
-            className='pointer-events-auto h-7 min-w-0 max-w-full px-2 font-mono text-sm text-muted-foreground hover:text-foreground'
-          >
-            <span className='min-w-0 truncate'>{filename}</span>
-          </Button>
-        </div>
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={onOpenSidebar}
+          aria-label='Open file explorer'
+          className='h-7 min-w-0 max-w-full justify-self-start px-2 font-mono text-sm text-muted-foreground hover:text-foreground sm:justify-self-center'
+        >
+          <span className='min-w-0 truncate'>{filename}</span>
+        </Button>
 
-        <div className='z-10 col-start-3 flex items-center gap-1.5 sm:gap-2'>
+        <div className='flex items-center gap-1.5 justify-self-end sm:gap-2'>
           <div
             role='group'
             aria-label='View mode'
@@ -73,33 +65,25 @@ export function ContentToolbar({
             <Button
               variant='ghost'
               size='sm'
-              aria-label='Preview'
               aria-pressed={mode === 'preview'}
               onClick={() => onModeChange('preview')}
-              className={cn(
-                'h-7 px-1.5 sm:px-2',
-                mode === 'preview' && 'bg-accent text-accent-foreground'
-              )}
+              className='h-7 px-1.5 aria-pressed:bg-accent aria-pressed:text-accent-foreground sm:px-2'
             >
               <Eye className='size-3.5' />
-              <span className='hidden sm:inline'>Preview</span>
+              <span className='sr-only sm:not-sr-only'>Preview</span>
             </Button>
             <Button
               variant='ghost'
               size='sm'
-              aria-label='Raw'
               aria-pressed={mode === 'raw'}
               onClick={() => onModeChange('raw')}
-              className={cn(
-                'h-7 px-1.5 sm:px-2',
-                mode === 'raw' && 'bg-accent text-accent-foreground'
-              )}
+              className='h-7 px-1.5 aria-pressed:bg-accent aria-pressed:text-accent-foreground sm:px-2'
             >
               <Code className='size-3.5' />
-              <span className='hidden sm:inline'>Raw</span>
+              <span className='sr-only sm:not-sr-only'>Raw</span>
             </Button>
           </div>
-          <ModeToggle className={toolbarIconButtonClass} />
+          <ModeToggle />
         </div>
       </header>
     </Surface>

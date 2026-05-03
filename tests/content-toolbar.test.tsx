@@ -75,8 +75,8 @@ describe('ContentToolbar', () => {
   it('hides both view mode labels on mobile', () => {
     renderToolbar();
 
-    expect(screen.getByText('Preview')).toHaveClass('hidden', 'sm:inline');
-    expect(screen.getByText('Raw')).toHaveClass('hidden', 'sm:inline');
+    expect(screen.getByText('Preview')).toHaveClass('sr-only', 'sm:not-sr-only');
+    expect(screen.getByText('Raw')).toHaveClass('sr-only', 'sm:not-sr-only');
   });
 
   it('keeps the view mode controls wired to mode changes', async () => {
