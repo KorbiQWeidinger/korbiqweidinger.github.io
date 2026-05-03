@@ -1,0 +1,22 @@
+{
+  "type": "folder",
+  "name": "contents",
+  "children": [
+    {
+      "type": "file",
+      "name": "home.md",
+      "path": "home.md"
+    },
+    {
+      "type": "folder",
+      "name": "notes",
+      "children": [
+        {
+          "type": "file",
+          "name": "about.md",
+          "path": "notes/about.md"
+        }
+      ]
+    }
+  ]
+}

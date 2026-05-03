@@ -7,13 +7,13 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant='outline'
-      size='icon'
+      variant='toolbarIcon'
+      size='iconSm'
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      aria-label='Toggle theme'
     >
-      <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-      <Moon className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
-      <span className='sr-only'>Toggle theme</span>
+      <Sun className='size-3.5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
+      <Moon className='absolute size-3.5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
     </Button>
   );
 }

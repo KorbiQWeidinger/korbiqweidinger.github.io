@@ -6,6 +6,7 @@ export const Routes = () => {
     <Router>
       <RouterRoutes>
         <Route path='/' element={<Main />} />
+        <Route path='*' element={<Main />} />
       </RouterRoutes>
     </Router>
   );
