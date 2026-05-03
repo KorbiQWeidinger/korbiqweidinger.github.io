@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { reducer as counter } from './slices/counter-slice';
+import { reducer as viewMode } from './slices/view-mode-slice';
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
@@ -10,6 +10,6 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 export const store = configureStore({
   reducer: {
-    counter,
+    viewMode,
   },
 });
