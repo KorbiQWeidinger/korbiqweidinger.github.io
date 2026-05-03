@@ -1,15 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KW">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="K">
   <rect width="64" height="64" rx="14" fill="#111827" />
-  <text
-    x="32"
-    y="39"
-    fill="#f9fafb"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="24"
-    font-weight="700"
-    letter-spacing="0"
-    text-anchor="middle"
-  >
-    KW
-  </text>
+  <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 50 L28 14" stroke="#f9fafb" />
+    <path d="M44 14 L24 32 L44 50" stroke="#f9fafb" />
+  </g>
 </svg>
