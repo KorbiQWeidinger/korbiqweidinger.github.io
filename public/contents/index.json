@@ -8,13 +8,49 @@
       "path": "home.md"
     },
     {
+      "type": "file",
+      "name": "cv.md",
+      "path": "cv.md"
+    },
+    {
       "type": "folder",
-      "name": "notes",
+      "name": "blog",
       "children": [
         {
           "type": "file",
-          "name": "about.md",
-          "path": "notes/about.md"
+          "name": "transparent-ai-dev.md",
+          "path": "blog/transparent-ai-dev.md"
+        },
+        {
+          "type": "file",
+          "name": "one-year-microservice-frontend.md",
+          "path": "blog/one-year-microservice-frontend.md"
+        },
+        {
+          "type": "file",
+          "name": "clean-code-vs-shipping-fast.md",
+          "path": "blog/clean-code-vs-shipping-fast.md"
+        },
+        {
+          "type": "file",
+          "name": "conductor.md",
+          "path": "blog/conductor.md"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "projects",
+      "children": [
+        {
+          "type": "file",
+          "name": "zum-goldenen-kalb.md",
+          "path": "projects/zum-goldenen-kalb.md"
+        },
+        {
+          "type": "file",
+          "name": "tattoo-garching.md",
+          "path": "projects/tattoo-garching.md"
         }
       ]
     }

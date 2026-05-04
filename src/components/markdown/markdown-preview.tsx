@@ -1,5 +1,11 @@
+import { useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { CvHeader } from '@/components/markdown/cv-header';
+import { toCvHeaderData } from '@/components/markdown/cv-header-data';
+import { MarkdownDates } from '@/components/markdown/markdown-dates';
+import { MarkdownLink } from '@/components/markdown/markdown-link';
+import { parseFrontmatter } from '@/utils/parse-frontmatter';
 import { cn } from '@/utils/cn';
 
 interface MarkdownPreviewProps {
@@ -8,6 +14,9 @@ interface MarkdownPreviewProps {
 }
 
 export function MarkdownPreview({ source, className }: MarkdownPreviewProps) {
+  const { data, dates, content } = useMemo(() => parseFrontmatter(source), [source]);
+  const cvHeaderData = useMemo(() => toCvHeaderData(data), [data]);
+
   return (
     <article
       className={cn(
@@ -16,22 +25,15 @@ export function MarkdownPreview({ source, className }: MarkdownPreviewProps) {
         className
       )}
     >
+      {cvHeaderData && <CvHeader data={cvHeaderData} />}
+      <MarkdownDates dates={dates} />
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          a: ({ href, children, ...props }) => (
-            <a
-              href={href}
-              target={href?.startsWith('http') ? '_blank' : undefined}
-              rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
-              {...props}
-            >
-              {children}
-            </a>
-          ),
+          a: MarkdownLink,
         }}
       >
-        {source}
+        {content}
       </ReactMarkdown>
     </article>
   );

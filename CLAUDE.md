@@ -45,8 +45,9 @@ pnpm dlx shadcn@latest add XXX
 - Keep border and radius values token-based (`border-border`, `rounded-md`, `rounded-lg`,
   `bg-card`, `bg-background`, `text-muted-foreground`). Avoid arbitrary border colors, mixed
   radii, and local shadow recipes unless a new primitive variant is being added.
-- Prefer lucide icons inside icon buttons. Provide `aria-label` or screen-reader text for
-  icon-only controls.
+- Use `lucide-react` for interface icons and `react-icons` brand packs for brand/social logos
+  such as GitHub or LinkedIn. Reuse package icons instead of hand-writing inline SVG paths in
+  feature components. Provide `aria-label` or screen-reader text for icon-only controls.
 
 ## Package Manager
 
