@@ -1,30 +1,47 @@
 import { cn } from '@/utils/cn';
+import { MarkdownLink } from '@/components/markdown/markdown-link';
 
 interface MarkdownRawProps {
   source: string;
   className?: string;
 }
 
-const URL_SPLIT_PATTERN = /(https?:\/\/[^\s)]+)/g;
-const URL_TEST_PATTERN = /^https?:\/\/[^\s)]+$/;
+const MARKDOWN_LINK_PATTERN = /\[([^\]\n]+)]\(([^)\s]+)(?:\s+["'][^)]*["'])?\)/g;
 
 function linkify(text: string) {
-  return text.split(URL_SPLIT_PATTERN).map((part, index) => {
-    if (!URL_TEST_PATTERN.test(part)) {
-      return part;
+  const parts = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  MARKDOWN_LINK_PATTERN.lastIndex = 0;
+
+  while ((match = MARKDOWN_LINK_PATTERN.exec(text))) {
+    const [rawLink, label, href] = match;
+    const startsAsImage = match.index > 0 && text[match.index - 1] === '!';
+
+    if (startsAsImage) {
+      continue;
     }
-    return (
-      <a
-        key={index}
-        href={part}
-        target='_blank'
-        rel='noopener noreferrer'
+
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+
+    parts.push(
+      <MarkdownLink
+        key={`markdown-link-${match.index}-${rawLink.length}`}
+        href={href}
         className='text-primary underline underline-offset-4 hover:opacity-80'
       >
-        {part}
-      </a>
+        {label}
+      </MarkdownLink>
     );
-  });
+    lastIndex = match.index + rawLink.length;
+  }
+
+  parts.push(text.slice(lastIndex));
+
+  return parts;
 }
 
 export function MarkdownRaw({ source, className }: MarkdownRawProps) {
